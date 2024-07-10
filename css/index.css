@@ -1,0 +1,14 @@
+/* 우리다움 폰트 적용 */
+@font-face {
+    font-family: 'woori';
+    src: url('../src/WooridaumL.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'woori';
+    
+    /* Bold체 */
+    /* font-weight: bold; */
+}
