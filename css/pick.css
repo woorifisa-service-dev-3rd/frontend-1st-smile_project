@@ -1,0 +1,31 @@
+.pick-size {
+    width: 338px;
+    height: 642px;
+    padding: 20px;
+}
+
+/*border-bottom-color 변경 희망: #5A5A5A -> 연하게*/
+.certification-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 20px;
+
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #5A5A5A;
+}
+
+.certification-header img {
+    width: 30px;
+    height: 27px;
+    filter: invert(51%) sepia(97%) saturate(1765%) hue-rotate(157deg) brightness(89%) contrast(101%);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.certification-header span {
+    font-size: 17px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
