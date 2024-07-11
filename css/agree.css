@@ -205,6 +205,8 @@ input.agree_checkbox:checked + label::before {
 
     background-color: #fff;
     border: none;
+
+    cursor: pointer;
 }
 
 .post__button__right {
@@ -214,4 +216,6 @@ input.agree_checkbox:checked + label::before {
     background-color: var(--sub-color);
     border: none;
     color: #fff;
+
+    cursor: pointer;
 }
