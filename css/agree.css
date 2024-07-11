@@ -21,9 +21,14 @@
     /* font-weight: bold; */
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 .wrapper__right__bottom {
-    width: 500px;
-    height: 321px;
+    width: 100%;
+    height: 100%;
 
     /* 정렬 */
     display: flex;
