@@ -1,14 +1,70 @@
 /* 우리다움 폰트 적용 */
 @font-face {
-    font-family: 'woori';
-    src: url('../src/WooridaumL.ttf') format('truetype');
+  font-family: "woori";
+  src: url("../src/WooridaumL.ttf") format("truetype");
+}
+@font-face {
+  font-family: "wooriB";
+  src: url("../src/WooridaumB.ttf") format("truetype");
+}
+
+/* 컬러 변수 */
+:root {
+  --main-color: #253a71;
+  --sub-color: #0067ac;
+  --sub2-color: #f2f2f2;
+  --font-main-color: #222222;
+  --font-sub-color: #5a5a5a;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'woori';
-    
-    /* Bold체 */
-    /* font-weight: bold; */
+  box-sizing: border-box;
+  margin: 0;
+
+html, body {
+  font-family: "woori";
+}
+
+  /* Bold체 */
+  /* font-weight: bold; */
+}
+.right-main {
+  background-color: rgb(248, 248, 248);
+}
+.viewport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #222222;
+}
+
+.screen {
+  display: flex;
+  width: 838px;
+  height: 642px;
+  background-color: white;
+  justify-content: space-between;
+}
+
+/* .left-main {
+    padding: 23px 30px 0;
+    width: 338px;
+    height: 642px;
+} */
+
+.right-main {
+  width: 500px;
+  height: 642px;
+}
+
+.info {
+  width: 500px;
+  height: 321px;
+}
+
+.check {
+  width: 500px;
+  height: 321px;
 }

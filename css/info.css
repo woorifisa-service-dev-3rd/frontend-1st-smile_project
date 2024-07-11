@@ -1,0 +1,107 @@
+/* 컬러 변수 */
+:root {
+  --main-color: #253a71;
+  --sub-color: #0067ac;
+  --sub2-color: #f2f2f2;
+  --font-main-color: #222222;
+  --font-sub-color: #5a5a5a;
+}
+
+.header {
+  padding-left: 20px;
+  padding-top: 20px;
+  height: 60px;
+  width: 100%;
+  background-color: var(--main-color);
+}
+
+.header-name {
+  font-size: 17px;
+  color: white;
+  font-family: "wooriB";
+}
+
+.info-header-div {
+  margin-top: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.info-header {
+  font-size: 17px;
+  font-family: "wooriB";
+  margin-top: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.info-main {
+  margin: 0px 20px 0px 20px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.info-name {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--font-main-color);
+}
+
+.info-birth,
+.info-phone {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--font-sub-color);
+}
+
+.info-phone {
+  border-bottom: 1px solid var(--font-sub-color);
+}
+
+.name-label,
+.birth-label,
+.phone-label {
+  display: flex;
+  align-items: center;
+  width: 133px;
+  height: 55px;
+  padding-top: 3px;
+  padding-left: 20px;
+  background-color: rgb(242, 242, 242);
+  font-size: 15px;
+}
+
+.name,
+.birth {
+  height: 38.4px;
+  width: 295px;
+  margin-left: 10px;
+  border: 1px solid var(--font-sub-color);
+  padding: 10px;
+}
+
+.first-phone {
+  height: 38.4px;
+  width: 65px;
+  border: 1px solid var(--font-sub-color);
+  padding: 5px;
+  margin-left: 10px;
+  color: var(--font-main-color);
+}
+
+.last-phone {
+  height: 38.4px;
+  width: 220px;
+  border: 1px solid var(--font-sub-color);
+  padding: 10px;
+  margin-left: 5px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox  */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
