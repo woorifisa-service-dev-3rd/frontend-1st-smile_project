@@ -1,11 +1,48 @@
-# frontend-1st-smile_project:D
+# 우리FISA frontend 1st project - 우서 프로젝트(smile project:D)
 
-Team Leader: Eve.Shin
+## 💡프로젝트 소개
 
-# 우서
+간편인증(민간인증서)를 우리금융그룹 스타일로 클론 코딩한 프로젝트입니다.
+![개인정보입력](https://github.com/woorifisa-service-dev-3rd/frontend-1st-smile_project/assets/68517303/d7bb5edd-6a2e-40b8-b7d6-3c063eb93f89)
 
-### 우리은행 인증서
-팀원 : 유승아, 오선민, 신원섭
+## 👨‍💻팀원 소개
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/bw02184">
+        <img src="https://github.com/bw02184.png" alt="팀장 신원섭" width="200" height="200"/>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/seonmin56">
+        <img src="https://github.com/seonmin5.png" alt="오선민" width="200" height="200"/>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/SeungAh-Yoo99">
+        <img src="https://github.com/SeungAh-Yoo99.png" alt="유승아" width="200" height="200"/>
+      </a>
+    </td>
+  </tr>
+   <tr>
+    <td align="center">
+      <a href="https://github.com/bw02184">
+        <b>신원섭</b>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/seonmin5">
+        <b>오선민</b>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/SeungAh-Yoo99">
+        <b>유승아</b>
+      </a>
+    </td>
+  </tr>
+</table>
 
 UI 스타일 가이드라인
 
