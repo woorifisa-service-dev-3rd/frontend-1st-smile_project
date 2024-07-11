@@ -3,7 +3,6 @@
   font-family: "woori";
   src: url("../src/WooridaumL.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "wooriB";
   src: url("../src/WooridaumB.ttf") format("truetype");
@@ -22,7 +21,7 @@
   box-sizing: border-box;
   margin: 0;
 
-html {
+html, body {
   font-family: "woori";
 }
 
