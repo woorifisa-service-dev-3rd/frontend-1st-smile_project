@@ -18,7 +18,7 @@
     display: flex;
     justify-content: start;
     align-items: flex-start;
-    padding: 17px 20px 13px;
+    padding: 15px 20px 13px;
     height: 59.5px;
 }
 
@@ -26,7 +26,7 @@
     width: 30px;
     height: 27px;
     filter: invert(51%) sepia(97%) saturate(1765%) hue-rotate(157deg) brightness(89%) contrast(101%);
-    margin-right: 20px;
+    margin-right: 10px;
     /*margin-bottom: 20px;*/
 }
 
@@ -34,7 +34,7 @@
     font-family: 'wooriB';
     font-size: 17px;
     font-weight: bolder;
-    margin-top: 3px;
+    margin-top: 5px;
     /*margin-bottom: 20px;*/
 }
 
