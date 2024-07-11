@@ -3,7 +3,11 @@
 ## 💡프로젝트 소개
 
 간편인증(민간인증서)를 우리금융그룹 스타일로 클론 코딩한 프로젝트입니다.
+
+### 개인정보 입력
 ![개인정보입력](https://github.com/woorifisa-service-dev-3rd/frontend-1st-smile_project/assets/68517303/d7bb5edd-6a2e-40b8-b7d6-3c063eb93f89)
+### 서비스 이용에 대한 동의
+![서비스이용에대한동의](https://github.com/woorifisa-service-dev-3rd/frontend-1st-smile_project/assets/68517303/45cb5682-97ff-4be7-87e9-ab31c23184a8)
 
 ## 👨‍💻팀원 소개
 
@@ -118,5 +122,3 @@ https://codepen.io/sosuke/pen/Pjoqqp
   filter: invert(51%) sepia(97%) saturate(1765%) hue-rotate(157deg) brightness(89%) contrast(101%);
 }
 ```
-![개인정보입력](https://github.com/woorifisa-service-dev-3rd/frontend-1st-smile_project/assets/68517303/d7bb5edd-6a2e-40b8-b7d6-3c063eb93f89)
-![서비스이용에대한동의](https://github.com/woorifisa-service-dev-3rd/frontend-1st-smile_project/assets/68517303/45cb5682-97ff-4be7-87e9-ab31c23184a8)
