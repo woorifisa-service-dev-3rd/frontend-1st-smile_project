@@ -3,6 +3,7 @@
     font-family: 'woori';
     src: url('../src/WooridaumL.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'wooriB';
     src: url('../src/WooridaumB.ttf') format('truetype');
@@ -12,38 +13,44 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'woori';
-    
+
     /* Bold체 */
     /* font-weight: bold; */
 }
+
 .viewport {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100%;
-    background-color: rgb(31, 31, 31);
-  }
-  .screen {
+    background-color: #222222;
+}
+
+.screen {
     display: flex;
     width: 838px;
     height: 642px;
     background-color: white;
-  }
-  .left-main {
+}
+
+.left-main {
     padding: 23px 30px 0;
     width: 338px;
     height: 642px;
-  }
-  .right-main {
+}
+
+.right-main {
     width: 500px;
     height: 642px;
-  }
-  .info {
+}
+
+.info {
     width: 500px;
     height: 321px;
-  }
-  .check {
+}
+
+.check {
     width: 500px;
     height: 321px;
-  }
+}

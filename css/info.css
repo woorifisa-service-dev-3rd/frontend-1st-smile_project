@@ -1,6 +1,7 @@
 .info {
     width: 100%;
     height: 100%;
+    border :none;
 }
 
 .header {
@@ -14,14 +15,19 @@
 .header-name {
     font-size: 17px;
     color: white;
+    font-family: 'wooriB';
 }
 
-p {
-    font-size: 17px;
+.info-header-div {
     margin-top: 2rem;
     margin-bottom: 1.6rem;
 }
-
+.info-header {
+    font-size: 17px;    
+    font-family: 'wooriB';
+    margin-top: 2rem;
+    margin-bottom: 1.6rem;
+}
 .info-main {
     margin: 0px 20px 0px 20px;
     border-bottom: 1px solid #D8D8D8;
@@ -30,14 +36,18 @@ p {
 .info-name {
     display: flex;
     align-items: center;
-    border-top: 1px solid black;
+    border-top: 1px solid #222222;
 }
 
 .info-birth,
 .info-phone {
     display: flex;
     align-items: center;
-    border-top: 1px solid #b5b5b5;
+    border-top: 1px solid #5A5A5A;
+}
+
+.info-phone {
+    border-bottom: 1px solid #5A5A5A;
 }
 
 .name-label,
@@ -49,7 +59,8 @@ p {
     height: 55px;
     padding-top: 3px;
     padding-left: 20px;
-    background-color: rgb(242, 242, 242);
+    /* background-color: rgb(242, 242, 242); */
+    background-color:#5A5A5A;
     font-size: 15px;
 }
 
@@ -58,22 +69,23 @@ p {
     height: 38.4px;
     width: 295px;
     margin-left: 10px;
-    border: 1px solid #b5b5b5;
+    border: 1px solid #5A5A5A;
     padding: 10px;
 }
 
 .first-phone {
     height: 38.4px;
     width: 65px;
-    border: 1px solid #b5b5b5;
+    border: 1px solid #5A5A5A;
     padding: 5px;
     margin-left: 10px;
+    color: #222222;
 }
 
 .last-phone {
     height: 38.4px;
     width: 220px;
-    border: 1px solid #b5b5b5;
+    border: 1px solid #5A5A5A;
     padding: 10px;
     margin-left: 5px;
 }
