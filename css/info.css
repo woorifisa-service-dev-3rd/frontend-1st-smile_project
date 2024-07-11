@@ -25,12 +25,14 @@
   margin-top: 2rem;
   margin-bottom: 1.6rem;
 }
+
 .info-header {
   font-size: 17px;
   font-family: "wooriB";
   margin-top: 2rem;
   margin-bottom: 1.6rem;
 }
+
 .info-main {
   margin: 0px 20px 0px 20px;
   border-bottom: 1px solid #d8d8d8;
@@ -91,6 +93,7 @@
   padding: 10px;
   margin-left: 5px;
 }
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
