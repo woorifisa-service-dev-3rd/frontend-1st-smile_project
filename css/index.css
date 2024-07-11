@@ -41,13 +41,14 @@
     width: 838px;
     height: 642px;
     background-color: white;
+    justify-content: space-between;
 }
 
-/*.left-main {
+/* .left-main {
     padding: 23px 30px 0;
     width: 338px;
     height: 642px;
-}*/
+} */
 
 .right-main {
     width: 500px;
