@@ -26,13 +26,6 @@
     /* font-weight: bold; */
 }
 
-html,
-body {
-    width: 100%;
-    height: 100%;
-    font-family: 'woori';
-}
-
 .wrapper__right__bottom {
     width: 100%;
     height: 100%;
