@@ -1,0 +1,67 @@
+.pick-size {
+    width: 338px;
+    height: 642px;
+    padding: 20px;
+}
+
+/*certification-header css*/
+/*border-bottom-color 변경 희망: #5A5A5A -> 연하게*/
+.certification-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.certification-header img {
+    width: 30px;
+    height: 27px;
+    filter: invert(51%) sepia(97%) saturate(1765%) hue-rotate(157deg) brightness(89%) contrast(101%);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.certification-header span {
+    font-size: 17px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+/*section*/
+.app-icon-bg {
+    height: 555px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-around;
+
+    border-top-style: solid;
+    border-top-color: #5A5A5A;
+    border-top-width: 1px;
+}
+
+#li-direction.app-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*border-color 변경 희망: #5A5A5A -> 연하게*/
+#li-direction.app-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #5A5A5A;
+}
+
+#li-direction.app-icon a {
+    font-size: 13px;
+    display: inline-block;
+    padding-top: 5px;
+}
