@@ -175,6 +175,8 @@ input.agree_checkbox:checked + label::before {
     font-size: 15px;
     font-weight: bold;
     color: var(--sub-color);
+
+    cursor: pointer;
 }
 
 .manual__info img {
