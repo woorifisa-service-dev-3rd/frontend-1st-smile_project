@@ -1,4 +1,4 @@
-# 우리FISA frontend 1st project - 우서 프로젝트(smile project:D)
+# 우서 프로젝트 - smile project:D
 [바로가기](https://woorifisa-service-dev-3rd.github.io/frontend-1st-smile_project/)
 <br><br>
 
