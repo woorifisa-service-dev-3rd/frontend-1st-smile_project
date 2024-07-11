@@ -19,7 +19,7 @@
   <tr>
     <td align="center">
       <a href="https://github.com/bw02184">
-        <img src="https://github.com/bw02184.png" alt="팀장 신원섭" width="150" height="150"/>
+        <img src="https://github.com/bw02184.png" alt="신원섭" width="150" height="150"/>
       </a>
     </td>
     <td align="center">
@@ -36,17 +36,17 @@
    <tr>
     <td align="center">
       <a href="https://github.com/bw02184">
-        <b>신원섭</b>
+        <b>팀장 신원섭</b>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/seonmin5">
-        <b>오선민</b>
+        <b>팀원 오선민</b>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/SeungAh-Yoo99">
-        <b>유승아</b>
+        <b>팀원 유승아</b>
       </a>
     </td>
   </tr>
