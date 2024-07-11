@@ -14,7 +14,8 @@ UI 스타일 가이드라인
 - 제목: WooridaumB, 그외: WooridaumL
 - font-size: 17 15 13
 
-2. 컬러 배색 \*포인트 색상
+2. 컬러 배색
+   포인트 색상
 
 - 간편인증 진한 컬러: #253a71
 - 인증요청 등 하늘색 컬러: #0067ac
@@ -65,6 +66,10 @@ div{
       <p>Welcome</p>b
     </details>
 ```
+
+![인증서1](https://github.com/woorifisa-service-dev-3rd/frontend-1st-smile_project/assets/102367393/46b8138c-1e2a-487a-9590-b9b4699edc43)
+
+![인증서2](https://github.com/woorifisa-service-dev-3rd/frontend-1st-smile_project/assets/102367393/23e9894e-ca66-41d2-ac31-0e35d263e29c)
 
 ### 이미지 색상 변경
 
