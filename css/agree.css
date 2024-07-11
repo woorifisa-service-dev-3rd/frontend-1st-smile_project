@@ -21,36 +21,35 @@
     /* font-weight: bold; */
 }
 
-html {
-    width: 500px;
-}
-
 .wrapper__right__bottom {
-    width: 100%;
+    width: 500px;
+    height: 321px;
 
     /* 정렬 */
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     /* 전체 내부 여백 */
-    padding: 20px;
-
-    border: 1px solid red;
+    padding: 20px 20px 0 20px;
 }
 
 /* 동의 */
 .agreement {
     width: 100%;
-    height: 140px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
     /* 외부 여백 */
     margin-bottom: 7px;
-
-    border: 1px solid orange;
 }
 
 .agree__title {
     width: 100%;
+    height: 21px;
 
     /* 정렬 */
     display: flex;
@@ -96,7 +95,7 @@ input#allAgreement:checked + label::before {
 
 
 .agree__content {
-    height: 50px;
+    height: 140px;
 
     display: flex;
     flex-direction: row;
@@ -104,20 +103,17 @@ input#allAgreement:checked + label::before {
     font-size: 13px;
 }
 
-.agree__content div {
+.agree__content__child {
     width: 50%;
-    height: 100%;
+    height: 50px;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
 
-.agree__content__left {
-}
-
-.agree__content__right {
+    border: 1px solid var(--font-sub-color);
+    color: var(--font-sub-color);
 }
 
 /* 개별동의 체크박스 */
@@ -150,10 +146,70 @@ input.agree_checkbox:checked + label::before {
     background-size: 20px 20px;
 }
 
-.manual {
-    width: 100%;
+.agree__content__viewTerms {
+    font-size: 13px;
+    background-color: transparent;
+    border: 1px solid var(--font-sub-color);
+    margin-left: 3px;
+    cursor: pointer;
 }
 
-.button {
+.manual {
     width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.manual__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background-color: transparent;
+    border: none;
+
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--sub-color);
+}
+
+.manual__info img {
+    width: 22px;
+    height: 22px;
+    padding-right: 5px;
+}
+
+.post__button {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.post__button button {
+    height: 55px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.post__button__left {
+    width: 150px;
+    height: 100%;
+
+    background-color: #fff;
+    border: none;
+}
+
+.post__button__right {
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--sub-color);
+    border: none;
+    color: #fff;
 }
