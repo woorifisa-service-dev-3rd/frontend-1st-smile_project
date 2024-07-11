@@ -3,6 +3,10 @@
     font-family: 'woori';
     src: url('../src/WooridaumL.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'wooriB';
+    src: url('../src/WooridaumB.ttf') format('truetype');
+}
 
 /* 컬러 변수 */
 :root {
@@ -15,7 +19,6 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'woori';
     
     /* Bold체 */
     /* font-weight: bold; */
@@ -24,6 +27,7 @@
 html, body {
     width: 100%;
     height: 100%;
+    font-family: 'woori';
 }
 
 .wrapper__right__bottom {
@@ -65,7 +69,7 @@ html, body {
 
     /* 폰트 */
     font-size: 17px;
-    font-weight: bold;
+    font-family: 'wooriB';
 
     margin-bottom: 16px;
 }
@@ -206,7 +210,7 @@ input.agree_checkbox:checked + label::before {
 .post__button button {
     height: 55px;
     font-size: 17px;
-    font-weight: bold;
+    font-family: 'wooriB';
 }
 
 .post__button__left {
