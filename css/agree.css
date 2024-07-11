@@ -3,6 +3,7 @@
     font-family: 'woori';
     src: url('../src/WooridaumL.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'wooriB';
     src: url('../src/WooridaumB.ttf') format('truetype');
@@ -19,12 +20,13 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    
+
     /* Bold체 */
     /* font-weight: bold; */
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     font-family: 'woori';
@@ -78,14 +80,17 @@ html, body {
 input#allAgreement {
     display: none;
 }
-input#allAgreement + label {
+
+input#allAgreement+label {
     cursor: pointer;
 }
-input#allAgreement + label > span {
+
+input#allAgreement+label>span {
     vertical-align: middle;
     padding-left: 5px;
 }
-input#allAgreement + label::before {
+
+input#allAgreement+label::before {
     width: 20px;
     height: 20px;
 
@@ -95,7 +100,8 @@ input#allAgreement + label::before {
     background-size: 20px 20px;
     vertical-align: middle;
 }
-input#allAgreement:checked + label::before {
+
+input#allAgreement:checked+label::before {
     width: 20px;
     height: 20px;
 
@@ -131,14 +137,17 @@ input#allAgreement:checked + label::before {
 input.agree_checkbox {
     display: none;
 }
-input.agree_checkbox + label {
+
+input.agree_checkbox+label {
     cursor: pointer;
 }
-input.agree_checkbox + label > span {
+
+input.agree_checkbox+label>span {
     vertical-align: middle;
     padding-left: 5px;
 }
-input.agree_checkbox + label::before {
+
+input.agree_checkbox+label::before {
     width: 20px;
     height: 20px;
 
@@ -148,7 +157,8 @@ input.agree_checkbox + label::before {
     background-size: 20px 20px;
     vertical-align: middle;
 }
-input.agree_checkbox:checked + label::before {
+
+input.agree_checkbox:checked+label::before {
     width: 20px;
     height: 20px;
 
