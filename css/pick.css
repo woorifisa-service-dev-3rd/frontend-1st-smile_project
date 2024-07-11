@@ -42,17 +42,26 @@
 .app-icon-bg {
     height: 555px;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
-    justify-content: space-around;
+    justify-content: space-around; */
 
     border-top-style: solid;
     border-top-color: var(--font-sub-color);
     border-top-width: 1px;
 }
 
-#li-direction.app-icon {
+.app-icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-around;
+    padding: 0px;
+}
+
+.app-icon {
     width: 70px;
     height: 70px;
     display: flex;
@@ -62,7 +71,7 @@
     margin-bottom: 20px;
 }
 
-#li-direction.app-icon img {
+.app-icon img {
     width: 50px;
     height: 50px;
     border-radius: 25%;
@@ -71,7 +80,7 @@
     border-color: var(--sub2-color);
 }
 
-#li-direction.app-icon a {
+.app-icon a {
     font-size: 13px;
     display: inline-block;
     padding-top: 5px;
