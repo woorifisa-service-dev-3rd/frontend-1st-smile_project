@@ -36,7 +36,7 @@ html, body {
     justify-content: space-between;
 
     /* 전체 내부 여백 */
-    padding: 20px 20px 0 20px;
+    padding: 20px 0 0 20px;
 }
 
 /* 동의 */
@@ -50,6 +50,8 @@ html, body {
 
     /* 외부 여백 */
     margin-bottom: 7px;
+
+    padding-right: 20px;
 }
 
 .agree__title {
@@ -154,9 +156,10 @@ input.agree_checkbox:checked + label::before {
 .agree__content__viewTerms {
     font-size: 13px;
     background-color: transparent;
-    border: 1px solid var(--font-sub-color);
-    margin-left: 3px;
+    margin-left: 5px;
     cursor: pointer;
+    border: none;
+    color: var(--font-sub-color);
 }
 
 .manual {
@@ -167,6 +170,8 @@ input.agree_checkbox:checked + label::before {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+
+    padding-right: 20px;
 }
 
 .manual__info {
