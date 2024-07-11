@@ -43,7 +43,7 @@ body {
     justify-content: space-between;
 
     /* 전체 내부 여백 */
-    padding: 20px 0 0 20px;
+    padding: 20px 0 0 0px;
 }
 
 /* 동의 */
@@ -58,7 +58,7 @@ body {
     /* 외부 여백 */
     margin-bottom: 7px;
 
-    padding-right: 20px;
+    padding: 0 20px;
 }
 
 .agree__title {
@@ -186,7 +186,7 @@ input.agree_checkbox:checked+label::before {
     justify-content: flex-end;
     align-items: center;
 
-    padding-right: 20px;
+    padding: 0 20px;
 }
 
 .manual__info {
