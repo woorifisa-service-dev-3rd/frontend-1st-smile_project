@@ -21,7 +21,10 @@
 * {
   box-sizing: border-box;
   margin: 0;
+
+html {
   font-family: "woori";
+}
 
   /* Bold체 */
   /* font-weight: bold; */
