@@ -1,5 +1,5 @@
 # 우서 프로젝트 - smile project:D
-[바로가기](https://woorifisa-service-dev-3rd.github.io/frontend-1st-smile_project/)
+[Live Demo](https://woorifisa-service-dev-3rd.github.io/frontend-1st-smile_project/)
 <br><br>
 
 ## 💡프로젝트 소개
