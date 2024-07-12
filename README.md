@@ -212,7 +212,7 @@ div{
 
 ### Accessibility
 
-* li 태그를 ol 태그나 ul 태그와 함깨 사용하지 않음
+* li 태그를 ol 태그나 ul 태그와 함께 사용하지 않음
 * img 태그 alt 속성 수정
 * png 파일 압축
 
