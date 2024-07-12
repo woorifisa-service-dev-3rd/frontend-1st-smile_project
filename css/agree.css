@@ -1,14 +1,3 @@
-/* 우리다움 폰트 적용 */
-@font-face {
-    font-family: 'woori';
-    src: url('../src/WooridaumL.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'wooriB';
-    src: url('../src/WooridaumB.ttf') format('truetype');
-}
-
 /* 컬러 변수 */
 :root {
     --main-color: #253a71;
@@ -26,13 +15,6 @@
     /* font-weight: bold; */
 }
 
-html,
-body {
-    width: 100%;
-    height: 100%;
-    font-family: 'woori';
-}
-
 .wrapper__right__bottom {
     width: 100%;
     height: 100%;
@@ -43,7 +25,7 @@ body {
     justify-content: space-between;
 
     /* 전체 내부 여백 */
-    padding: 20px 0 0 20px;
+    padding: 20px 0 0 0px;
 }
 
 /* 동의 */
@@ -58,7 +40,7 @@ body {
     /* 외부 여백 */
     margin-bottom: 7px;
 
-    padding-right: 20px;
+    padding: 0 20px;
 }
 
 .agree__title {
@@ -177,6 +159,11 @@ input.agree_checkbox:checked+label::before {
     color: var(--font-sub-color);
 }
 
+.agree__content__popover {
+    width: 530px;
+    height: 562px;
+}
+
 .manual {
     width: 100%;
     height: 100%;
@@ -186,7 +173,7 @@ input.agree_checkbox:checked+label::before {
     justify-content: flex-end;
     align-items: center;
 
-    padding-right: 20px;
+    padding: 0 20px;
 }
 
 .manual__info {
@@ -207,7 +194,7 @@ input.agree_checkbox:checked+label::before {
 .manual__info img {
     width: 22px;
     height: 22px;
-    padding-right: 5px;
+    margin-right: 5px;
 }
 
 .post__button {
