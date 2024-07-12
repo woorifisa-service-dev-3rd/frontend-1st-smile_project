@@ -23,7 +23,7 @@
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/seonmin56">
+      <a href="https://github.com/seonmin5">
         <img src="https://github.com/seonmin5.png" alt="오선민" width="150" height="150"/>
       </a>
     </td>
