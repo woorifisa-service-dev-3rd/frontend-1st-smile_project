@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="./css/info.css">
   <link rel="stylesheet" href="./css/pick.css">
   <link rel="icon" href="./src/favicon.ico">
+  <!-- Tailwindcss를 사용하기 위한 cdn 코드 -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -128,7 +130,8 @@
                 <div class="agree__content__child">
                   <input type="checkbox" id="personalInformationAgreement" class="agree_checkbox">
                   <label for="personalInformationAgreement"><span>개인정보 이용 동의(필수)</span></label>
-                  <button class="agree__content__viewTerms" popovertarget="personalInformationAgreementPopover">></button>
+                  <button class="agree__content__viewTerms"
+                    popovertarget="personalInformationAgreementPopover">></button>
                   <div id="personalInformationAgreementPopover" popover class="agree__content__popover">
                     우리FISA 3기에 오신걸 환영합니다 ^^
                   </div>
@@ -136,7 +139,8 @@
                 <div class="agree__content__child">
                   <input type="checkbox" id="thirdPartyInformationAgreement" class="agree_checkbox">
                   <label for="thirdPartyInformationAgreement"><span>제3자정보제공동의(필수)</span></label>
-                  <button class="agree__content__viewTerms" popovertarget="thirdPartyInformationAgreementPopover">></button>
+                  <button class="agree__content__viewTerms"
+                    popovertarget="thirdPartyInformationAgreementPopover">></button>
                   <div id="thirdPartyInformationAgreementPopover" popover class="agree__content__popover">
                     취준 화이팅!
                   </div>
