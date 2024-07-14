@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우서 인증서</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <style>
+      .info {
+        width: 100%;
+        height: 100%;
+      }
+      .header {
+        padding-left: 20px;
+        padding-top: 20px;
+        height: 60px;
+        width: 100%;
+        background-color: #253a71;
+      }
+      .header-name {
+        font-size: 17px;
+        color: white;
+      }
+      p {
+        padding-left: 20px;
+        font-size: 17px;
+        margin-top: 2rem;
+        margin-bottom: 1.6rem;
+      }
+      .info-main {
+        border-bottom: 1px solid #d8d8d8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info">
+      <div class="header"><span class="header-name">간편인증</span></div>
+      <div class="info-main">
+        <form action="#">
+          <p>본인인증 정보 입력</p>
+          <div class="info-name">
+            <div class="name-label"><label for="name">이름</label></div>
+            <div>
+              <input
+                id="name"
+                class="name"
+                type="text"
+                title="이름"
+                placeholder="홍길동"
+                maxlength="50"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
