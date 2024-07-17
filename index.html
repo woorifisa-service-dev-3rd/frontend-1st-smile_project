@@ -110,7 +110,7 @@
               <div class="info-birth">
                 <div class="birth-label"><label for="birth">생년월일</label></div>
                 <div>
-                  <input id="birth" class="birth" type="number" title="생년월일" placeholder="19900101" maxlength="8" />
+                  <input id="birth" class="birth" type="number" title="생년월일" placeholder="19900101" maxlength="8" oninput="maxLengthCheck(this);"/>
                 </div>
               </div>
               <div class="info-phone">
@@ -126,7 +126,7 @@
                     <option value="019">019</option>
                   </select>
                   <input id="phone" class="last-phone" type="number" title="휴대폰 번호" placeholder="12341234"
-                    maxlength="8" />
+                    maxlength="8" oninput="maxLengthCheck(this);"/>
                 </div>
               </div>
             </form>
