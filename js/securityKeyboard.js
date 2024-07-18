@@ -39,6 +39,12 @@ buttonListArray.forEach((buttonElement) => {
     ) {
       inputBirthElement.value += buttonValue;
     }
+
+    // 클릭된 button 배경색 변경
+    buttonElement.style.backgroundColor = "#f2f2f2";
+    setTimeout(() => {
+      buttonElement.style.backgroundColor = "";
+    }, 100);
   });
 });
 
