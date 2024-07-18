@@ -13,8 +13,8 @@
   <link rel="icon" href="./src/favicon.ico">
   <!-- Tailwindcss를 사용하기 위한 cdn 코드 -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script defer type="module" src="./js/firebaseInit.js"></script>
-  <script defer type="module" src="./js/firebaseSMS.js"></script>
+  <script type="module" src="./js/firebaseInit.js"></script>
+  <script type="module" src="./js/firebaseSMS.js"></script>
 </head>
 
 <body>
@@ -129,9 +129,9 @@
                 </div>
               </div>
               <div>
-                <div class="recaptcha-container" id="recaptcha-container"></div>
+                <!-- <div class="recaptcha-container" id="recaptcha-container"></div>
                 <button id="phoneNumberButton">핸드폰 번호 전송</button>
-                <button id="confrimCodeButton">확인 코드 전송</button>
+                <button id="confrimCodeButton">확인 코드 전송</button> -->
 
               </div>
             </form>
@@ -169,6 +169,9 @@
                 </div>
               </div>
             </div>
+            <div id="recaptcha-container"></div>   
+            <button id="phoneNumberButton">핸드폰 번호 전송</button>
+            <button id="confrimCodeButton">확인 코드 전송</button>
 
             <!-- 사용방법 메뉴얼 안내 -->
             <div class="manual">

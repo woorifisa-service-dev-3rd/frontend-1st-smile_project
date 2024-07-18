@@ -6,15 +6,25 @@ import {
 const auth = getAuth();
 auth.languageCode = "ko";
 
+// window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
+//   size: "invisible",
+//   callback: (response) => {
+//     // reCAPTCHA solved, allow signInWithPhoneNumber.
+//     onSignInSubmit();
+//   },
+// });
 window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
-  size: "invisible",
+  size: "normal",
   callback: (response) => {
     // reCAPTCHA solved, allow signInWithPhoneNumber.
-    onSignInSubmit();
-    console.log(response);
+    // ...
+  },
+  "expired-callback": () => {
+    // Response expired. Ask user to solve reCAPTCHA again.
+    // ...
   },
 });
-
+auth().settings.appVerificationDisabledForTesting = true;
 document
   .getElementById("phoneNumberButton")
   .addEventListener("click", (event) => {
@@ -24,6 +34,7 @@ document
       first_phone_element.options[first_phone_element.selectedIndex].value;
     const last_phone_number = document.getElementById("phone").value;
     const phoneNumber = first_phone_number + last_phone_number;
+    // const phoneNumber = "01090900876";
     const appVerifier = window.recaptchaVerifier;
 
     signInWithPhoneNumber(auth, "+82" + phoneNumber, appVerifier)
