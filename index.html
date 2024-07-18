@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +14,7 @@
   <link rel="icon" href="./src/favicon.ico">
   <!-- Tailwindcss를 사용하기 위한 cdn 코드 -->
   <script src="https://cdn.tailwindcss.com"></script>
-    <!-- js -->
-  <script defer src="./js/iconclick.js"></script> <!-- 아이콘 클릭 -->
+  <!-- js -->
   <script defer src="./js/agree.js"></script> <!-- 전체 동의 -->
 </head>
 
@@ -98,7 +98,7 @@
       </div>
       <div class="right-main">
         <div class="info">
-          <div class="header right-main-header"><span class="header-name">간편인증</span></div>
+          <div class="header"><span class="header-name">간편인증</span></div>
           <div class="info-main">
             <form action="#">
               <div class="info-header-div"><span class="info-header">본인인증 정보 입력</span></div>
@@ -111,13 +111,14 @@
               <div class="info-birth">
                 <div class="birth-label"><label for="birth">생년월일</label></div>
                 <div>
-                  <input id="birth" class="birth" type="number" title="생년월일" placeholder="19900101" maxlength="8" />
+                  <input id="birth" class="birth" type="number" title="생년월일" placeholder="19900101" maxlength="8" oninput="maxLengthCheck(this);"/>
                 </div>
               </div>
               <div class="info-phone">
                 <div class="phone-label"><label for="phone">휴대폰 번호</label></div>
-                <div>
-                  <select title="휴대폰번호 앞자리 선택" class="first-phone"><!---->
+                <div class="call">
+                  <select title="통신사 선택" class="telecom" id="telecom" style="display: none;"> <option selected="selected" disabled="disabled">통신사</option> <option value="S">SKT</option> <option value="K">KT</option> <option value="L">LGU+</option></select>
+                  <select title="휴대폰번호 앞자리 선택" class="first-phone">
                     <option value="010">010</option>
                     <option value="011">011</option>
                     <option value="016">016</option>
@@ -126,7 +127,7 @@
                     <option value="019">019</option>
                   </select>
                   <input id="phone" class="last-phone" type="number" title="휴대폰 번호" placeholder="12341234"
-                    maxlength="8" />
+                    maxlength="8" oninput="maxLengthCheck(this);"/>
                 </div>
               </div>
             </form>
