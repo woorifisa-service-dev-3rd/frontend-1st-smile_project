@@ -54,7 +54,7 @@ document
     event.preventDefault();
     const code_element = document.getElementById("phone_check");
     const code = code_element.value;
-    console.log("hi", code_element.disabled);
+
     if (code_element.disabled === true) return;
     else {
       confirmationResult
@@ -63,17 +63,19 @@ document
           // User signed in successfully.
           const user = result.user;
           console.log(result);
+
           code_element.disabled = true;
+          document.getElementById("telecom").disabled = true;
+          document.getElementById("first-phone").disabled = true;
+          document.getElementById("phone").readOnly = true;
           document
             .getElementById("confrimCodeButton")
             .setAttribute("disabled", true);
-          // ...
         })
         .catch((error) => {
           console.log(error);
           alert("다시 입력하세요.");
           // User couldn't sign in (bad verification code?)
-          // ...
         });
     }
   });
