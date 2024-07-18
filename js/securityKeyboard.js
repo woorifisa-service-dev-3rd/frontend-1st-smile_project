@@ -23,6 +23,8 @@ function closeModal(params) {
 // button 배열로 만들기
 const buttonList = document.getElementsByClassName("securityKeyboard-button");
 const buttonListArray = Array.from(buttonList);
+const backspaceButton = document.getElementsByClassName("backspace-button");
+const backspaceButtonArray = Array.from(backspaceButton);
 
 // 각 button 요소에 클릭 이벤트 리스너 추가
 // button click -> 해당하는 숫자 input box 입력
@@ -39,3 +41,11 @@ buttonListArray.forEach((buttonElement) => {
     }
   });
 });
+
+// backspace button click -> 기입력된 값 삭제
+backspaceButtonArray.forEach((backspaceElement) => {
+  backspaceElement.addEventListener("click", backspaceFunction);
+});
+function backspaceFunction(params) {
+  inputBirthElement.value = inputBirthElement.value.slice(0, -1);
+}
