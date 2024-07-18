@@ -7,18 +7,14 @@
     --font-sub-color: #5A5A5A;
 }
 
-/* .pick-size {
-    width: 338px;
-    height: 642px;
-    padding: 20px;
-} */
-
 /*certification-header css*/
 .certification-header {
     display: flex;
     justify-content: start;
-    align-items: flex-start;
-    padding: 15px 20px 13px;
+    /*align-items: flex-start;*/
+    align-items: center;
+    /*padding: 15px 20px 13px;*/
+    padding-left: 15px;
     height: 60px;
 }
 
@@ -34,7 +30,7 @@
     font-family: 'wooriB';
     font-size: 17px;
     font-weight: bolder;
-    margin-top: 5px;
+    /*margin-top: 5px;*/
     /*margin-bottom: 20px;*/
 }
 
