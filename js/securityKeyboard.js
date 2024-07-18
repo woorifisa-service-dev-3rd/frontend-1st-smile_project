@@ -3,7 +3,7 @@ const inputBirthElement = document.querySelector("#birth");
 const modal = document.querySelector("#modal");
 const closeButton = document.querySelector(".button-close");
 const screen = document.querySelector(".screen");
-const keyboard_modal = document.getElementById("keyboard-modal-bg");
+const keyboard_modal = document.querySelector(".keyboard-modal-bg");
 
 // security keyboard modal
 // input box과 close button에 이벤트 리스너 추가
@@ -21,20 +21,30 @@ function randomIndex(totalIndex) {
   return randomIndexArray;
 }
 
+function removeChildForIndex(parent, index) {
+  for (let ii = 0; ii < index; ii++) {
+    if (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+  }
+}
+
 // security keyboard 켜기
 function showModal(params) {
   modal.style.display = "block";
+  removeChildForIndex(keyboard_modal, 10);
   const randomIndexs = randomIndex(10);
-  keyboard_modal.insertAdjacentHTML(
-    "beforeend",
-    `<p>보안 키패드를 이용하세요</p>`
-  );
   randomIndexs.forEach((index) => {
     keyboard_modal.insertAdjacentHTML(
       "beforeend",
       `<button class="securityKeyboard-button" value="${index}">${index}</button>`
     );
   });
+  keyboard_modal.insertAdjacentHTML(
+    "beforeend",
+    ` <button class="securityKeyboard-button" style="visibility: hidden;"></button>
+                        <button class="backspace-button" value="-1">←</button>`
+  );
 
   // security keyboard button -> number input box insert
   // button 배열로 만들기
@@ -54,6 +64,12 @@ function showModal(params) {
       ) {
         inputBirthElement.value += buttonValue;
       }
+
+      // 클릭된 button 배경색 변경
+      buttonElement.style.backgroundColor = "#f2f2f2";
+      setTimeout(() => {
+        buttonElement.style.backgroundColor = "";
+      }, 100);
     });
   });
 }
@@ -61,9 +77,34 @@ function showModal(params) {
 // security keyboard 끄기
 function closeModal(params) {
   modal.style.display = "none";
-  keyboard_modal.replaceChildren();
+  removeChildForIndex(keyboard_modal, 10);
 }
 
+// security keyboard button -> number input box insert
+// button 배열로 만들기
+const backspaceButton = document.getElementsByClassName("backspace-button");
+const backspaceButtonArray = Array.from(backspaceButton);
+
+// button shuffle
+const buttons = document.querySelector(".securityKeyboard-button");
+
+function backspaceFunction() {
+  inputBirthElement.value = inputBirthElement.value.slice(0, -1);
+}
+
+// backspace button click -> 기입력된 값 삭제
+backspaceButtonArray.forEach((backspaceElement) => {
+  backspaceElement.addEventListener("click", () => {
+    backspaceFunction();
+    // 클릭된 button 배경색 변경
+    backspaceElement.style.backgroundColor = "#f2f2f2";
+    setTimeout(() => {
+      backspaceElement.style.backgroundColor = "";
+    }, 100);
+  });
+});
+
+// keyboard 입력 막기
 inputBirthElement.addEventListener("keyup", (e) => {
   e.target.value = "";
 });

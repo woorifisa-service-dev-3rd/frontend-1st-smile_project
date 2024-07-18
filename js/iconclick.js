@@ -4,6 +4,9 @@
 const appList = document.getElementsByClassName("app-icon");
 const appListArray = Array.from(appList);
 
+// 선택된 인증서 DOM
+let selectedCertificateDOM = null;
+
 // 각 app-icon 요소에 클릭 이벤트 리스너 추가
 appListArray.forEach((iconElement) => {
   iconElement.addEventListener("click", () => {
@@ -14,6 +17,9 @@ appListArray.forEach((iconElement) => {
     const imgElement = iconElement.querySelector("img");
     const imgSrc = imgElement.src;
     const imgAlt = imgElement.alt;
+
+    // 클릭된 아이콘 선택 표시
+    changCertificateStye(imgElement);
 
     // 클릭된 아이콘의 이름 가져오기
     const iconNameElement = iconElement.querySelector("a");
@@ -42,3 +48,17 @@ appListArray.forEach((iconElement) => {
     rightMainHeader.appendChild(iconNameSpan); // 이름 추가
   });
 });
+
+const changCertificateStye = (newCertificate) => {
+
+  // 기존에 선택되었던 인증서 스타일 되돌리기
+  if(selectedCertificateDOM !== null) {
+    selectedCertificateDOM.style.borderWidth = '1px';
+    selectedCertificateDOM.style.borderColor = '#e5e7eb';
+  }
+
+  newCertificate.style.borderWidth = '3px';
+  newCertificate.style.borderColor = 'var(--main-color)';
+
+  selectedCertificateDOM = newCertificate;
+}

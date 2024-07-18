@@ -6,7 +6,9 @@
   --font-main-color: #222222;
   --font-sub-color: #5a5a5a;
 }
-input, input::placeholder, select {
+input,
+input::placeholder,
+select {
   font-size: 15px;
   font-family: "woori";
 }
@@ -24,17 +26,17 @@ input, input::placeholder, select {
   margin-left: 5px;
   font-size: 17px;
   color: white;
-  font-family: 'wooriB';
+  font-family: "wooriB";
 }
 
 .info-header-div {
-  margin-top: 2rem;
-  margin-bottom: 1.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .info-header {
   font-size: 17px;
-  font-family: 'wooriB';
+  font-family: "wooriB";
   margin-top: 2rem;
   margin-bottom: 1.6rem;
 }
@@ -56,19 +58,21 @@ input, input::placeholder, select {
   justify-content: space-evenly;
 }
 .info-birth,
-.info-phone {
+.info-phone,
+.info-check {
   display: flex;
   align-items: center;
   border-top: 1px solid var(--font-sub-color);
 }
 
-.info-phone {
+.info-check {
   border-bottom: 1px solid var(--font-sub-color);
 }
 
 .name-label,
 .birth-label,
-.phone-label {
+.phone-label,
+.phone_check-label {
   display: flex;
   align-items: center;
   width: 133px;
@@ -80,7 +84,8 @@ input, input::placeholder, select {
 }
 
 .name,
-.birth {
+.birth,
+.phone_check {
   height: 38.4px;
   width: 300px;
   margin-left: 10px;
@@ -101,12 +106,23 @@ input, input::placeholder, select {
 
 .last-phone {
   height: 38.4px;
-  width: 225px;
+  width: 180px;
   border: 1px solid var(--font-sub-color);
   padding: 10px;
   margin-left: 10px;
 }
+.phone_check {
+  width: 255px;
+}
 
+#phoneNumberButton,
+#confrimCodeButton {
+  border: 1px solid black;
+  height: 38.4px;
+  width: 40px;
+  margin-left: 5px;
+  font-size: 15px;
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -115,6 +131,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox  */
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
 }

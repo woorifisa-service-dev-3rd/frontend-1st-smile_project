@@ -21,23 +21,23 @@
   box-sizing: border-box;
   margin: 0;
 
-html, body {
-  font-family: "woori";
-}
+  html,
+  body {
+    font-family: "woori";
+  }
 
-  /* Bold체 */
-  /* font-weight: bold; */
 }
 .right-main {
   background-color: rgb(248, 248, 248);
 }
+
 .viewport {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-color: #222222;
+  background-color: var(--font-main-color);
 }
 
 .screen {
@@ -46,6 +46,7 @@ html, body {
   height: 642px;
   background-color: white;
   justify-content: space-between;
+  position: relative;
 }
 
 /* .left-main {
@@ -61,10 +62,10 @@ html, body {
 
 .info {
   width: 500px;
-  height: 321px;
+  height: 370px;
 }
 
 .check {
   width: 500px;
-  height: 321px;
+  height: 272px;
 }
