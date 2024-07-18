@@ -54,7 +54,14 @@ function suffleButtons(params) {}
 
 // backspace button click -> 기입력된 값 삭제
 backspaceButtonArray.forEach((backspaceElement) => {
-  backspaceElement.addEventListener("click", backspaceFunction);
+  backspaceElement.addEventListener("click", () => {
+    backspaceFunction();
+    // 클릭된 button 배경색 변경
+    backspaceElement.style.backgroundColor = "#f2f2f2";
+    setTimeout(() => {
+      backspaceElement.style.backgroundColor = "";
+    }, 100);
+  });
 });
 function backspaceFunction(params) {
   inputBirthElement.value = inputBirthElement.value.slice(0, -1);
