@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,80 +11,93 @@
   <link rel="stylesheet" href="./css/agree.css">
   <link rel="stylesheet" href="./css/info.css">
   <link rel="stylesheet" href="./css/pick.css">
+  <link rel="stylesheet" href="./css/securityKeyboard.css">
+  <link rel="stylesheet" href="./css/info-warning-popover.css">
   <link rel="icon" href="./src/favicon.ico">
   <!-- Tailwindcss를 사용하기 위한 cdn 코드 -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- js -->
+  <script type="module" src="./js/firebaseInit.js"></script>
+  <script type="module" src="./js/firebaseSMS.js"></script>
+  <script defer src="./js/agree.js"></script> <!-- 전체 동의 -->
+  <script defer src="./js/iconclick.js"></script>
+  <script defer src="./js/info.js"></script>
+  <script defer src="./js/securityKeyboard.js"></script>
+  <script defer src="./js/info-check.js"></script> <!-- 인증 요청 정보 확인 -->
+  <!-- CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </head>
 
 <body>
   <div class="viewport">
     <div class="screen">
+
       <div class="left-main">
         <div class="pick-width">
           <header class="certification-header">
-            <a href=""><img src="./src/img/icon_backarrow.png" alt="back"></a>
+            <img src="./src/img/icon_certificate.png" alt="fastId">
             <span>민간 인증서</span>
           </header>
 
           <section class="app-icon-bg">
-            <ul class="app-icon-list">
+            <ul class="app-icon-list" id="certificate-1">
               <li class="app-icon">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_woori.png" alt="woori"><a>우리인증서</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-2">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_toss.png" alt="toss"> <a>토스</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-3">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_shinhan.png" alt="shinhan"> <a>신한인증서</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-4">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_samsung.png" alt="samsung"> <a>삼성패스</a>
               </li>
 
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-5">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_salad.png" alt="banksalad"> <a>뱅크샐러드</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-6">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_payco.png" alt="payco"> <a>페이코</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-7">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_pass.png" alt="pass"> <a>PASS</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-8">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_nh.png" alt="nh"> <a>NH인증서</a>
               </li>
 
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-9">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_naver.png" alt="naver"> <a>네이버</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-10">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_kb.png" alt="KB"> <a>국민인증서</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-11">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_kakaotalk.png" alt="kakaotalk"> <a>카카오톡</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-12">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_kakaobank.png" alt="kakaobank"> <a>카카오뱅크</a>
               </li>
 
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-13">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_hana.png" alt="hana"> <a>하나인증서</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-14">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_dream.png" alt="dream"> <a>드림인증</a>
               </li>
@@ -95,7 +109,7 @@
       </div>
       <div class="right-main">
         <div class="info">
-          <div class="header"><span class="header-name">간편인증</span></div>
+          <div class="header right-main-header"><span class="header-name">간편인증</span></div>
           <div class="info-main">
             <form action="#">
               <div class="info-header-div"><span class="info-header">본인인증 정보 입력</span></div>
@@ -108,13 +122,19 @@
               <div class="info-birth">
                 <div class="birth-label"><label for="birth">생년월일</label></div>
                 <div>
-                  <input id="birth" class="birth" type="number" title="생년월일" placeholder="19900101" maxlength="8" />
+                  <input id="birth" class="birth" type="number" title="생년월일" placeholder="19900101" maxlength="8" oninput="maxLengthCheck(this);"/>
                 </div>
               </div>
               <div class="info-phone">
                 <div class="phone-label"><label for="phone">휴대폰 번호</label></div>
-                <div>
-                  <select title="휴대폰번호 앞자리 선택" class="first-phone"><!---->
+                <div class="call">
+                  <select title="통신사 선택" class="telecom" id="telecom" style="display: none;"> 
+                    <option selected="selected" disabled="disabled">통신사</option> 
+                    <option value="SKT">SKT</option>
+                    <option value="KT">KT</option> 
+                    <option value="LGU+">LGU+</option>
+                  </select>
+                  <select title="휴대폰번호 앞자리 선택" class="first-phone" id="first-phone">
                     <option value="010">010</option>
                     <option value="011">011</option>
                     <option value="016">016</option>
@@ -122,9 +142,15 @@
                     <option value="018">018</option>
                     <option value="019">019</option>
                   </select>
-                  <input id="phone" class="last-phone" type="number" title="휴대폰 번호" placeholder="12341234"
-                    maxlength="8" />
+                  <input id="phone" class="last-phone" type="number" title="휴대폰 번호" placeholder="12341234" maxlength="8" oninput="maxLengthCheck(this);"/>
+                  <button type="button" id="phoneNumberButton">전송</button>
                 </div>
+              </div>
+              <div class="info-check">
+                <div class="phone_check-label"><label for="phone_check">인증번호</label></div>
+                <input id="phone_check" class="phone_check" type="number" title="인증번호" maxlength="6" oninput="maxLengthCheck(this);" />
+                <button type="button" id="confrimCodeButton">인증</button>
+                <div id="recaptcha-container"></div>   
               </div>
             </form>
           </div>
@@ -147,7 +173,7 @@
                   <button class="agree__content__viewTerms"
                     popovertarget="personalInformationAgreementPopover">></button>
                   <div id="personalInformationAgreementPopover" popover class="agree__content__popover">
-                    우리FISA 3기에 오신걸 환영합니다 ^^
+                    우리FISA 3기에 오신걸 환영합니다 ^______^
                   </div>
                 </div>
                 <div class="agree__content__child">
@@ -157,6 +183,30 @@
                     popovertarget="thirdPartyInformationAgreementPopover">></button>
                   <div id="thirdPartyInformationAgreementPopover" popover class="agree__content__popover">
                     취준 화이팅!
+                  </div>
+                  
+                  <!--보안 키보드 모달창-->
+                  <div id="modal">
+                    <div class="keyboard-modal">
+                      <div class="keyboard-information">
+                        <p>보안 키패드를 이용하세요</p>
+                        <button class="button-close"><img src="./src/img/icon_closebutton.png" alt="security keyboard close"></button>
+                      </div>
+                      <div class="keyboard-modal-bg">
+                        <!-- <button class="securityKeyboard-button" value="1">1</button>
+                        <button class="securityKeyboard-button" value="2">2</button>
+                        <button class="securityKeyboard-button" value="3">3</button>
+                        <button class="securityKeyboard-button" value="4">4</button>
+                        <button class="securityKeyboard-button" value="5">5</button>
+                        <button class="securityKeyboard-button" value="6">6</button>
+                        <button class="securityKeyboard-button" value="7">7</button>
+                        <button class="securityKeyboard-button" value="8">8</button>
+                        <button class="securityKeyboard-button" value="9">9</button>
+                        <button class="securityKeyboard-button" value="0">0</button> -->
+                        <button class="securityKeyboard-button" style="visibility: hidden;"></button>
+                        <button class="backspace-button" id="backspace-button" value="-1">←</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -172,11 +222,22 @@
             <!-- 우측 하단 버튼 -->
             <div class="post__button">
               <button class="post__button__left">닫기</button>
-              <button class="post__button__right">인증 요청</button>
+              <button id="authenticationRequestButton" class="post__button__right">인증 요청</button>
             </div>
           </div>
         </div>
       </div>
+      <!-- 정보 입력 오류 시 경고 창 -->
+      <div id="infoWarningPopover" class="infoWarningPopover" popover>
+        <div class="infoWarningPopover__top">
+          <img class="infoWarningPopover__top__img" src="./src/img/icon_info.png" alt="info">
+          <div class="infoWarningPopover__top__title">안내</div>
+          <div class="infoWarningPopover__top__info" id="warningInfo"></div>
+        </div>
+        <button class="infoWarningPopover__bottom" id="infoWarningPopoverCloseBottom">확인</div>
+      </div>
+      <!-- 모달 배경 레이어 -->
+      <div id="popoverBackdrop" class="popover-backdrop"></div>
     </div>
   </div>
   </div>

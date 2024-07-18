@@ -1,0 +1,63 @@
+#modal{
+    height: 810px;
+    width: 404px;
+    display: none;
+    position: fixed;
+}
+
+.keyboard-modal{
+    background-color: #fff;
+    border: 1px solid;
+    position: absolute;
+    top: 200px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.keyboard-modal-bg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.keyboard-information{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.keyboard-information p{
+    font-family: 'wooriB';
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.button-close img{
+    height: 15px;
+    width: 15px;
+}
+
+.securityKeyboard-button {
+    font-weight: bolder;
+    border: 1px solid;
+    border-color: var(--sub2-color);
+    height: 60px;
+    width: 33%;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.backspace-button {
+    font-weight: bolder;
+    border: 1px solid;
+    border-color: var(--sub2-color);
+    height: 60px;
+    width: 33%;
+    display: inline-block;
+    font-size: 15px;
+}

@@ -10,6 +10,9 @@
 ![개인정보입력](https://github.com/woorifisa-service-dev-3rd/frontend-1st-smile_project/assets/68517303/d7bb5edd-6a2e-40b8-b7d6-3c063eb93f89)
 ### 서비스 이용에 대한 동의
 ![서비스이용에대한동의](https://github.com/woorifisa-service-dev-3rd/frontend-1st-smile_project/assets/68517303/45cb5682-97ff-4be7-87e9-ab31c23184a8)
+### 문자 인증 요청
+### 가상 키보드로 생년월일 입력
+### 정보 입력 유효성 확인
 
 <br>
 
@@ -53,15 +56,18 @@
   <tr>
     <td align="center">
       본인인증 정보 입력<br>
-      HTML, CSS 구현
+      HTML, CSS 구현<br>
+      문자인증 기능 구현
     </td>
     <td align="center">
       민간 인증서 선택<br>
-      HTML, CSS 구현
+      HTML, CSS 구현<br>
+      보안키보드 기능 구현
     </td>
     <td align="center">
       서비스 이용 동의<br>
-      HTML, CSS 구현
+      HTML, CSS 구현<br>
+      인증 정보 유효성 검사 기능 구현
     </td>
   </tr>
 </table>
@@ -138,6 +144,33 @@
 
 <br>
 
+## <img src="https://github.com/user-attachments/assets/3d0453e2-123d-4fe0-b5ca-c04b75cc8e8c" width=30px hieght=30px align="top"> ESLint
+
+<table>
+  <tr>
+    <td>추가한 Rules</td>
+    <td>설명</td>
+    <td>적용한 이유</td>
+  </tr>
+  <tr>
+    <td><code>no-var</code></td>
+    <td><code>var</code> 키워드로 변수를 선언하는 것을 금지</td>
+    <td>더 안전하고 예측 가능한 코드를 작성하도록 함</td>
+  </tr>
+  <tr>
+    <td><code>id-length</code></td>
+    <td>식별자(identifier) 이름 길이를 제한</td>
+    <td>코드의 가독성과 유지보수성을 높임</td>
+  </tr>
+  <tr>
+    <td><code>dot-notation</code></td>
+    <td>대괄호 표기법(<code>obj['property']</code>)보다는<br>점 표기법(<code>obj.property</code>)을 사용하도록 강제</td>
+    <td>더 간결하고 명확하게 작성하여 코드의 가독성을 높임</td>
+  </tr>
+</table>
+
+<br>
+
 ## ⚙️구현 특이 사항
 
 ### 변수사용
@@ -188,6 +221,20 @@ div{
 <br>
 <p>before&nbsp&nbsp&nbspafter</p>
 <br>
+
+### 생년월일 유효성 검사
+
+<code>Moment.js</code>를 사용하여 입력 받은 생년월일이 유효한 날짜인지 검사
+
+```
+<!-- CDN 선언(.html) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+```
+
+```
+// 사용(.js)
+if(!moment(생년월일).isValid()) 생년월일을 다시 입력하여 주십시오;
+```
 
 ## 📊Lighthouse를 통한 성능 개선
 
