@@ -45,7 +45,8 @@
 }
 
 .info-birth,
-.info-phone {
+.info-phone,
+.info-check {
   display: flex;
   align-items: center;
   border-top: 1px solid var(--font-sub-color);
@@ -57,7 +58,8 @@
 
 .name-label,
 .birth-label,
-.phone-label {
+.phone-label,
+.phone_check-label {
   display: flex;
   align-items: center;
   width: 133px;
@@ -69,7 +71,9 @@
 }
 
 .name,
-.birth {
+.birth,
+.phone_check,
+#confrimCodeButton {
   height: 38.4px;
   width: 295px;
   margin-left: 10px;
@@ -88,12 +92,20 @@
 
 .last-phone {
   height: 38.4px;
-  width: 220px;
+  width: 180px;
   border: 1px solid var(--font-sub-color);
   padding: 10px;
   margin-left: 5px;
 }
+.phone_check {
+  width: 255px;
+}
 
+#phoneNumberButton,
+#confrimCodeButton {
+  border: 1px solid black;
+  width: 40px;
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

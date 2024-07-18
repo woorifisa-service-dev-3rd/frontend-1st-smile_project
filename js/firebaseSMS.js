@@ -14,17 +14,12 @@ auth.languageCode = "ko";
 //   },
 // });
 window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
-  size: "normal",
+  size: "invisible",
   callback: (response) => {
     // reCAPTCHA solved, allow signInWithPhoneNumber.
-    // ...
-  },
-  "expired-callback": () => {
-    // Response expired. Ask user to solve reCAPTCHA again.
-    // ...
+    onSignInSubmit();
   },
 });
-auth().settings.appVerificationDisabledForTesting = true;
 document
   .getElementById("phoneNumberButton")
   .addEventListener("click", (event) => {

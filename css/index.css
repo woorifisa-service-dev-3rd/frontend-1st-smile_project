@@ -21,9 +21,10 @@
   box-sizing: border-box;
   margin: 0;
 
-html, body {
-  font-family: "woori";
-}
+  html,
+  body {
+    font-family: "woori";
+  }
 
   /* Bold체 */
   /* font-weight: bold; */
@@ -61,10 +62,10 @@ html, body {
 
 .info {
   width: 500px;
-  height: 321px;
+  height: 400px;
 }
 
 .check {
   width: 500px;
-  height: 321px;
+  height: 242px;
 }
