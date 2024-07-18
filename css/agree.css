@@ -1,233 +1,232 @@
 /* 컬러 변수 */
 :root {
-    --main-color: #253a71;
-    --sub-color: #0067ac;
-    --sub2-color: #f2f2f2;
-    --font-main-color: #222222;
-    --font-sub-color: #5A5A5A;
+  --main-color: #253a71;
+  --sub-color: #0067ac;
+  --sub2-color: #f2f2f2;
+  --font-main-color: #222222;
+  --font-sub-color: #5a5a5a;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 
-    /* Bold체 */
-    /* font-weight: bold; */
+  /* Bold체 */
+  /* font-weight: bold; */
 }
 
 .wrapper__right__bottom {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    /* 정렬 */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  /* 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    /* 전체 내부 여백 */
-    padding: 20px 0 0 0px;
+  /* 전체 내부 여백 */
+  /* padding: 20px 0 0 0px; */
 }
 
 /* 동의 */
 .agreement {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-    /* 외부 여백 */
-    margin-bottom: 7px;
+  /* 외부 여백 */
+  margin-bottom: 7px;
 
-    padding: 0 20px;
+  padding: 0 20px;
 }
 
 .agree__title {
-    width: 100%;
-    height: 21px;
+  width: 100%;
+  height: 21px;
 
-    /* 정렬 */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  /* 정렬 */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-    /* 폰트 */
-    font-size: 17px;
-    font-family: 'wooriB';
+  /* 폰트 */
+  font-size: 17px;
+  font-family: "wooriB";
 
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 /* 전체동의 체크박스 */
 input#allAgreement {
-    display: none;
+  display: none;
 }
 
-input#allAgreement+label {
-    cursor: pointer;
+input#allAgreement + label {
+  cursor: pointer;
 }
 
-input#allAgreement+label>span {
-    vertical-align: middle;
-    padding-left: 5px;
+input#allAgreement + label > span {
+  vertical-align: middle;
+  padding-left: 5px;
 }
 
-input#allAgreement+label::before {
-    width: 20px;
-    height: 20px;
+input#allAgreement + label::before {
+  width: 20px;
+  height: 20px;
 
-    content: "";
-    display: inline-block;
-    background-image: url('../src/img/checkbox-square.png');
-    background-size: 20px 20px;
-    vertical-align: middle;
+  content: "";
+  display: inline-block;
+  background-image: url("../src/img/checkbox-square.png");
+  background-size: 20px 20px;
+  vertical-align: middle;
 }
 
-input#allAgreement:checked+label::before {
-    width: 20px;
-    height: 20px;
+input#allAgreement:checked + label::before {
+  width: 20px;
+  height: 20px;
 
-    content: "";
-    background-image: url('../src/img/checkbox-square-checked.png');
-    background-size: 20px 20px;
+  content: "";
+  background-image: url("../src/img/checkbox-square-checked.png");
+  background-size: 20px 20px;
 }
-
 
 .agree__content {
-    height: 140px;
+  height: 40px;
 
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-    font-size: 13px;
+  font-size: 13px;
 }
 
 .agree__content__child {
-    width: 50%;
-    height: 50px;
+  width: 50%;
+  height: 50px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
-    border: 1px solid var(--font-sub-color);
-    color: var(--font-sub-color);
+  border: 1px solid var(--font-sub-color);
+  color: var(--font-sub-color);
 }
 
 /* 개별동의 체크박스 */
 input.agree_checkbox {
-    display: none;
+  display: none;
 }
 
-input.agree_checkbox+label {
-    cursor: pointer;
+input.agree_checkbox + label {
+  cursor: pointer;
 }
 
-input.agree_checkbox+label>span {
-    vertical-align: middle;
-    padding-left: 5px;
+input.agree_checkbox + label > span {
+  vertical-align: middle;
+  padding-left: 5px;
 }
 
-input.agree_checkbox+label::before {
-    width: 20px;
-    height: 20px;
+input.agree_checkbox + label::before {
+  width: 20px;
+  height: 20px;
 
-    content: "";
-    display: inline-block;
-    background-image: url('../src/img/checkbox-circle.png');
-    background-size: 20px 20px;
-    vertical-align: middle;
+  content: "";
+  display: inline-block;
+  background-image: url("../src/img/checkbox-circle.png");
+  background-size: 20px 20px;
+  vertical-align: middle;
 }
 
-input.agree_checkbox:checked+label::before {
-    width: 20px;
-    height: 20px;
+input.agree_checkbox:checked + label::before {
+  width: 20px;
+  height: 20px;
 
-    content: "";
-    background-image: url('../src/img/checkbox-circle-checked.png');
-    background-size: 20px 20px;
+  content: "";
+  background-image: url("../src/img/checkbox-circle-checked.png");
+  background-size: 20px 20px;
 }
 
 .agree__content__viewTerms {
-    font-size: 13px;
-    background-color: transparent;
-    margin-left: 5px;
-    cursor: pointer;
-    border: none;
-    color: var(--font-sub-color);
+  font-size: 13px;
+  background-color: transparent;
+  margin-left: 5px;
+  cursor: pointer;
+  border: none;
+  color: var(--font-sub-color);
 }
 
 .agree__content__popover {
-    width: 530px;
-    height: 562px;
+  width: 530px;
+  height: 562px;
 }
 
 .manual {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 
-    padding: 0 20px;
+  padding: 0 20px;
 }
 
 .manual__info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 
-    font-size: 15px;
-    font-weight: bold;
-    color: var(--sub-color);
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--sub-color);
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .manual__info img {
-    width: 22px;
-    height: 22px;
-    margin-right: 5px;
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
 }
 
 .post__button {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .post__button button {
-    height: 55px;
-    font-size: 17px;
-    font-family: 'wooriB';
+  height: 55px;
+  font-size: 17px;
+  font-family: "wooriB";
 }
 
 .post__button__left {
-    width: 150px;
-    height: 100%;
+  width: 150px;
+  height: 100%;
 
-    background-color: #fff;
-    border: none;
+  background-color: #fff;
+  border: none;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .post__button__right {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    background-color: var(--sub-color);
-    border: none;
-    color: #fff;
+  background-color: var(--sub-color);
+  border: none;
+  color: #fff;
 
-    cursor: pointer;
+  cursor: pointer;
 }
