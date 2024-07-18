@@ -22,8 +22,9 @@ appListArray.forEach((iconElement) => {
     let iconImage = document.createElement("img");
     iconImage.src = imgSrc;
     iconImage.alt = imgAlt;
-    Image.style.width = "70px";
-    Image.style.height = "70px";
+    iconImage.style.width = "30px";
+    iconImage.style.height = "30px";
+    iconImage.style.borderRadius = "10px";
 
     // right-main header 이미지 추가
     rightMainHeader.innerHTML = "";
