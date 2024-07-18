@@ -59,7 +59,6 @@ const changCertificateStye = (newCertificate) => {
 
   newCertificate.style.borderWidth = '3px';
   newCertificate.style.borderColor = 'var(--main-color)';
-  newCertificate.style.borderShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
 
   selectedCertificateDOM = newCertificate;
 }

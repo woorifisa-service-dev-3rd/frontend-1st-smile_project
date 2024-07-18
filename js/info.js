@@ -9,10 +9,10 @@ Array.from(lis).forEach((li, index) => {
     // insertIcon(li);
     if (index == 6) {
       telecom.style.display = "block";
-      phone.style.width = "150px";
+      phone.style.width = "105px";
     } else {
       telecom.style.display = "none";
-      phone.style.width = "225px";
+      phone.style.width = "180px";
     }
   });
 });
