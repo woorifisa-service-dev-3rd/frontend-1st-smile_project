@@ -56,15 +56,18 @@
   <tr>
     <td align="center">
       본인인증 정보 입력<br>
-      HTML, CSS 구현
+      HTML, CSS 구현<br>
+      문자인증 기능 구현
     </td>
     <td align="center">
       민간 인증서 선택<br>
-      HTML, CSS 구현
+      HTML, CSS 구현<br>
+      보안키보드 기능 구현
     </td>
     <td align="center">
       서비스 이용 동의<br>
-      HTML, CSS 구현
+      HTML, CSS 구현<br>
+      인증 정보 유효성 검사 기능 구현
     </td>
   </tr>
 </table>
