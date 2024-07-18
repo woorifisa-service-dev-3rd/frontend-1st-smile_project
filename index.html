@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="./css/agree.css">
   <link rel="stylesheet" href="./css/info.css">
   <link rel="stylesheet" href="./css/pick.css">
+  <link rel="stylesheet" href="./css/info-warning-popover.css">
+  <!-- icon -->
   <link rel="icon" href="./src/favicon.ico">
   <!-- Tailwindcss를 사용하기 위한 cdn 코드 -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,6 +22,9 @@
   <script defer src="./js/agree.js"></script> <!-- 전체 동의 -->
   <script defer src="./js/iconclick.js"></script>
   <script defer src="./js/info.js"></script>
+  <script defer src="./js/info-check.js"></script> <!-- 인증 요청 정보 확인 -->
+  <!-- CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </head>
 
 <body>
@@ -33,64 +38,64 @@
           </header>
 
           <section class="app-icon-bg">
-            <ul class="app-icon-list">
+            <ul class="app-icon-list" id="certificate-1">
               <li class="app-icon">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_woori.png" alt="woori"><a>우리인증서</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-2">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_toss.png" alt="toss"> <a>토스</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-3">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_shinhan.png" alt="shinhan"> <a>신한인증서</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-4">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_samsung.png" alt="samsung"> <a>삼성패스</a>
               </li>
 
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-5">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_salad.png" alt="banksalad"> <a>뱅크샐러드</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-6">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_payco.png" alt="payco"> <a>페이코</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-7">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_pass.png" alt="pass"> <a>PASS</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-8">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_nh.png" alt="nh"> <a>NH인증서</a>
               </li>
 
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-9">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_naver.png" alt="naver"> <a>네이버</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-10">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_kb.png" alt="KB"> <a>국민인증서</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-11">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_kakaotalk.png" alt="kakaotalk"> <a>카카오톡</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-12">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_kakaobank.png" alt="kakaobank"> <a>카카오뱅크</a>
               </li>
 
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-13">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_hana.png" alt="hana"> <a>하나인증서</a>
               </li>
-              <li class="app-icon">
+              <li class="app-icon" id="certificate-14">
                 <img class="w-[50px] h-[50px] border border-solid rounded-[15px] hover:scale-110"
                   src="./src/img/icon_dream.png" alt="dream"> <a>드림인증</a>
               </li>
@@ -123,8 +128,9 @@
                 <div class="call">
                   <select title="통신사 선택" class="telecom" id="telecom" style="display: none;"> 
                     <option selected="selected" disabled="disabled">통신사</option> 
-                    <option value="S">SKT</option> <option value="K">KT</option> 
-                    <option value="L">LGU+</option>
+                    <option value="SKT">SKT</option>
+                    <option value="KT">KT</option> 
+                    <option value="LGU+">LGU+</option>
                   </select>
                   <select title="휴대폰번호 앞자리 선택" class="first-phone" id="first-phone">
                     <option value="010">010</option>
@@ -190,13 +196,23 @@
             <!-- 우측 하단 버튼 -->
             <div class="post__button">
               <button class="post__button__left">닫기</button>
-              <button class="post__button__right">인증 요청</button>
+              <button id="authenticationRequestButton" class="post__button__right">인증 요청</button>
             </div>
           </div>
         </div>
       </div>
+      <!-- 정보 입력 오류 시 경고 창 -->
+      <div id="infoWarningPopover" class="infoWarningPopover" popover>
+        <div class="infoWarningPopover__top">
+          <img class="infoWarningPopover__top__img" src="./src/img/icon_info.png" alt="info">
+          <div class="infoWarningPopover__top__title">안내</div>
+          <div class="infoWarningPopover__top__info" id="warningInfo"></div>
+        </div>
+        <button class="infoWarningPopover__bottom" id="infoWarningPopoverCloseBottom">확인</div>
+      </div>
+      <!-- 모달 배경 레이어 -->
+      <div id="popoverBackdrop" class="popover-backdrop"></div>
     </div>
-  </div>
   </div>
 </body>
 
