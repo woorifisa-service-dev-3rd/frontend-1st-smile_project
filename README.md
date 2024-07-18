@@ -10,6 +10,9 @@
 ![개인정보입력](https://github.com/woorifisa-service-dev-3rd/frontend-1st-smile_project/assets/68517303/d7bb5edd-6a2e-40b8-b7d6-3c063eb93f89)
 ### 서비스 이용에 대한 동의
 ![서비스이용에대한동의](https://github.com/woorifisa-service-dev-3rd/frontend-1st-smile_project/assets/68517303/45cb5682-97ff-4be7-87e9-ab31c23184a8)
+### 문자 인증 요청
+### 가상 키보드로 생년월일 입력
+### 정보 입력 유효성 확인
 
 <br>
 
@@ -133,6 +136,33 @@
   <tr>
     <td>정렬</td>
     <td>기본 좌측 정렬<br>민간인증서 리스트는 가운데 정렬</td>
+  </tr>
+</table>
+
+<br>
+
+## <img src="https://github.com/user-attachments/assets/3d0453e2-123d-4fe0-b5ca-c04b75cc8e8c" width=30px hieght=30px align="top"> ESLint
+
+<table>
+  <tr>
+    <td>추가한 Rules</td>
+    <td>설명</td>
+    <td>적용한 이유</td>
+  </tr>
+  <tr>
+    <td><code>no-var</code></td>
+    <td><code>var</code> 키워드로 변수를 선언하는 것을 금지</td>
+    <td>더 안전하고 예측 가능한 코드를 작성하도록 함</td>
+  </tr>
+  <tr>
+    <td><code>id-length</code></td>
+    <td>식별자(identifier) 이름 길이를 제한</td>
+    <td>코드의 가독성과 유지보수성을 높임</td>
+  </tr>
+  <tr>
+    <td><code>dot-notation</code></td>
+    <td>대괄호 표기법(<code>obj['property']</code>)보다는<br>점 표기법(<code>obj.property</code>)을 사용하도록 강제</td>
+    <td>더 간결하고 명확하게 작성하여 코드의 가독성을 높임</td>
   </tr>
 </table>
 
