@@ -6,19 +6,25 @@
   --font-main-color: #222222;
   --font-sub-color: #5a5a5a;
 }
+input, input::placeholder, select {
+  font-size: 15px;
+  font-family: "woori";
+}
 
 .header {
-  padding-left: 20px;
-  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
   height: 60px;
   width: 100%;
   background-color: var(--main-color);
 }
 
 .header-name {
+  margin-left: 5px;
   font-size: 17px;
   color: white;
-  font-family: "wooriB";
+  font-family: 'wooriB';
 }
 
 .info-header-div {
@@ -28,7 +34,7 @@
 
 .info-header {
   font-size: 17px;
-  font-family: "wooriB";
+  font-family: 'wooriB';
   margin-top: 2rem;
   margin-bottom: 1.6rem;
 }
@@ -44,6 +50,11 @@
   border-top: 1px solid var(--font-main-color);
 }
 
+.call {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 .info-birth,
 .info-phone {
   display: flex;
@@ -71,27 +82,29 @@
 .name,
 .birth {
   height: 38.4px;
-  width: 295px;
+  width: 300px;
   margin-left: 10px;
   border: 1px solid var(--font-sub-color);
   padding: 10px;
 }
 
-.first-phone {
+.first-phone,
+.telecom {
   height: 38.4px;
   width: 65px;
   border: 1px solid var(--font-sub-color);
-  padding: 5px;
   margin-left: 10px;
   color: var(--font-main-color);
+  font-size: 15px;
+  font-family: "woori";
 }
 
 .last-phone {
   height: 38.4px;
-  width: 220px;
+  width: 225px;
   border: 1px solid var(--font-sub-color);
   padding: 10px;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -102,6 +115,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox  */
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
