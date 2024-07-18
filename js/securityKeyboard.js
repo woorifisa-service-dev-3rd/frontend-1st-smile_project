@@ -39,3 +39,7 @@ buttonListArray.forEach((buttonElement) => {
     }
   });
 });
+
+inputBirthElement.addEventListener("keyup", (e) => {
+  e.target.value = "";
+});
