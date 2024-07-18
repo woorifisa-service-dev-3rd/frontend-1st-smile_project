@@ -8,10 +8,16 @@
   height: 235px;
   padding: 0;
 
-  display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   z-index: 1000;
+
+
+}
+
+.infoWarningPopover.show {
+  display: flex;
 }
 
 .infoWarningPopover__top {
@@ -48,7 +54,7 @@
 
   font-family: 'wooriB';
   color: white;
-  font-size: 17;
+  font-size: 17px;
 }
 
 .popover-backdrop {
@@ -61,6 +67,6 @@
     /* 흐린 배경색 */
     z-index: 999;
     /* 모달 배경을 최상단에 표시 */
-    /* display: none; */
+    display: none;
     /* 초기에는 숨겨둠 */
 }
