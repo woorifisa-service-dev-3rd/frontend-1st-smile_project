@@ -7,13 +7,20 @@ const auth = getAuth();
 window.confirmationResult = null;
 auth.languageCode = "ko";
 
-// window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
-//   size: "invisible",
-//   callback: (response) => {
-//     // reCAPTCHA solved, allow signInWithPhoneNumber.
-//     onSignInSubmit();
-//   },
-// });
+// 버튼 중복 클릭 방지(디바운싱)
+function debounce(func, timeout = 300) {
+  let timer;
+  return (...args) => {
+      if (!timer) { // 이전에 설정된 타이머가 없는 경우에만 함수 호출 = 가장 처음에만 함수 호출
+          func.apply(this, args);
+      }
+      clearTimeout(timer);
+      timer = setTimeout(() => { // 일정 시간이 지난 후 timer 변수를 undefined로 설정해 다음 호출에 대비
+          timer = undefined;
+      }, timeout);
+  };
+}
+
 window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
   size: "invisible",
   callback: (response) => {
@@ -23,15 +30,18 @@ window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
 });
 document
   .getElementById("phoneNumberButton")
-  .addEventListener("click", (event) => {
-    // event.preventDefault();
+  .addEventListener("click", debounce((event) => {
+    event.preventDefault();
     const first_phone_element = document.getElementById("first-phone");
     const first_phone_number =
       first_phone_element.options[first_phone_element.selectedIndex].value;
     const last_phone_number = document.getElementById("phone").value;
     const phoneNumber = first_phone_number + last_phone_number;
-    // const phoneNumber = "01090900876";
     const appVerifier = window.recaptchaVerifier;
+    if(phoneNumber.length <8) {
+      alert("전화번호를 제대로 입력해 주세요.");
+      return;
+    }
 
     signInWithPhoneNumber(auth, "+82" + phoneNumber, appVerifier)
       .then((confirmationResult) => {
@@ -43,14 +53,15 @@ document
       })
       .catch((error) => {
         console.log(error);
+        alert(error.code);
         // Error; SMS not sent
         // ...
       });
-  });
+  }));
 
 document
   .getElementById("confrimCodeButton")
-  .addEventListener("click", (event) => {
+  .addEventListener("click", debounce((event) => {
     event.preventDefault();
     const code_element = document.getElementById("phone_check");
     const code = code_element.value;
@@ -78,4 +89,4 @@ document
           // User couldn't sign in (bad verification code?)
         });
     }
-  });
+  }));
