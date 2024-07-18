@@ -48,6 +48,10 @@ buttonListArray.forEach((buttonElement) => {
   });
 });
 
+// button shuffle
+const buttons = document.querySelector(".securityKeyboard-button");
+function suffleButtons(params) {}
+
 // backspace button click -> 기입력된 값 삭제
 backspaceButtonArray.forEach((backspaceElement) => {
   backspaceElement.addEventListener("click", backspaceFunction);
@@ -55,6 +59,8 @@ backspaceButtonArray.forEach((backspaceElement) => {
 function backspaceFunction(params) {
   inputBirthElement.value = inputBirthElement.value.slice(0, -1);
 }
+
+// keyboard 입력 막기
 inputBirthElement.addEventListener("keyup", (e) => {
   e.target.value = "";
 });
