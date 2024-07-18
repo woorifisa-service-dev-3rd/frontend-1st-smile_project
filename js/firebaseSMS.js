@@ -4,6 +4,7 @@ import {
   signInWithPhoneNumber,
 } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
 const auth = getAuth();
+window.confirmationResult = null;
 auth.languageCode = "ko";
 
 // window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
@@ -51,18 +52,28 @@ document
   .getElementById("confrimCodeButton")
   .addEventListener("click", (event) => {
     event.preventDefault();
-    const code = document.getElementById("confirmCode").value;
-    confirmationResult
-      .confirm(code)
-      .then((result) => {
-        // User signed in successfully.
-        const user = result.user;
-        console.log(result);
-        // ...
-      })
-      .catch((error) => {
-        console.log(error);
-        // User couldn't sign in (bad verification code?)
-        // ...
-      });
+    const code_element = document.getElementById("phone_check");
+    const code = code_element.value;
+    console.log("hi", code_element.disabled);
+    if (code_element.disabled === true) return;
+    else {
+      confirmationResult
+        ?.confirm(code)
+        .then((result) => {
+          // User signed in successfully.
+          const user = result.user;
+          console.log(result);
+          code_element.disabled = true;
+          document
+            .getElementById("confrimCodeButton")
+            .setAttribute("disabled", true);
+          // ...
+        })
+        .catch((error) => {
+          console.log(error);
+          alert("다시 입력하세요.");
+          // User couldn't sign in (bad verification code?)
+          // ...
+        });
+    }
   });
