@@ -11,11 +11,15 @@
   <link rel="stylesheet" href="./css/agree.css">
   <link rel="stylesheet" href="./css/info.css">
   <link rel="stylesheet" href="./css/pick.css">
+  <link rel="stylesheet" href="./css/info-warning-popover.css">
+  <!-- icon -->
   <link rel="icon" href="./src/favicon.ico">
   <!-- Tailwindcss를 사용하기 위한 cdn 코드 -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- js -->
   <script defer src="./js/info.js"></script>
   <script defer src="./js/agree.js"></script> <!-- 전체 동의 -->
+  <script defer src="./js/info-check.js"></script> <!-- 인증 요청 정보 확인 -->
 </head>
 
 <body>
@@ -181,8 +185,18 @@
           </div>
         </div>
       </div>
+      <!-- 정보 입력 오류 시 경고 창 -->
+      <div id="infoWarningPopover" class="infoWarningPopover" popover>
+        <div class="infoWarningPopover__top">
+          <img class="infoWarningPopover__top__img" src="./src/img/icon_info.png" alt="info">
+          <div class="infoWarningPopover__top__title">안내</div>
+          <div class="infoWarningPopover__top__info"></div>
+        </div>
+        <button class="infoWarningPopover__bottom">확인</div>
+      </div>
+      <!-- 모달 배경 레이어 -->
+      <div id="popoverBackdrop" class="popover-backdrop"></div>
     </div>
-  </div>
   </div>
 </body>
 

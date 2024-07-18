@@ -1,0 +1,66 @@
+.infoWarningPopover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 300px;
+  height: 235px;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1000;
+}
+
+.infoWarningPopover__top {
+  width: 100%;
+  flex-grow: 1;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: white;
+}
+
+.infoWarningPopover__top__img {
+  width: 50px;
+  height: 50px;
+}
+
+.infoWarningPopover__top__title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.infoWarningPopover__top__info {
+  flex: 16;
+}
+
+.infoWarningPopover__bottom {
+  width: 100%;
+  height: 45px;
+  background-color: var(--sub-color);
+
+  font-family: 'wooriB';
+  color: white;
+  font-size: 17;
+}
+
+.popover-backdrop {
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 흐린 배경색 */
+    z-index: 999;
+    /* 모달 배경을 최상단에 표시 */
+    /* display: none; */
+    /* 초기에는 숨겨둠 */
+}
