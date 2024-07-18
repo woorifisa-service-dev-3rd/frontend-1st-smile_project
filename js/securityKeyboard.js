@@ -41,9 +41,11 @@ buttonListArray.forEach((buttonElement) => {
     }
 
     // 클릭된 button 배경색 변경
-    buttonElement.style.backgroundColor = "#f2f2f2";
+    buttonElement.style.backgroundColor = "var(--sub-color)";
+    buttonElement.style.color = "#FFF";
     setTimeout(() => {
       buttonElement.style.backgroundColor = "";
+      buttonElement.style.color = "";
     }, 100);
   });
 });
@@ -57,9 +59,11 @@ backspaceButtonArray.forEach((backspaceElement) => {
   backspaceElement.addEventListener("click", () => {
     backspaceFunction();
     // 클릭된 button 배경색 변경
-    backspaceElement.style.backgroundColor = "#f2f2f2";
+    backspaceElement.style.backgroundColor = "var(--sub-color)";
+    backspaceElement.style.color = "#FFF";
     setTimeout(() => {
       backspaceElement.style.backgroundColor = "";
+      backspaceElement.style.color = "";
     }, 100);
   });
 });

@@ -47,17 +47,13 @@
     align-items: center;
 }
 
-/* .button-close{
-    position: absolute;
-    display: flex;
-} */
-
 .button-close img{
     height: 15px;
     width: 15px;
 }
 
 .securityKeyboard-button {
+    font-weight: bolder;
     border: 1px solid;
     border-color: var(--sub2-color);
     height: 60px;
@@ -67,6 +63,7 @@
 }
 
 .backspace-button {
+    font-weight: bolder;
     border: 1px solid;
     border-color: var(--sub2-color);
     height: 60px;
