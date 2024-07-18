@@ -11,8 +11,7 @@
   <link rel="stylesheet" href="./css/agree.css">
   <link rel="stylesheet" href="./css/info.css">
   <link rel="stylesheet" href="./css/pick.css">
-  <link rel="stylesheet" href="./css/info-warning-popover.css">
-  <!-- icon -->
+  <link rel="stylesheet" href="./css/securityKeyboard.css">
   <link rel="icon" href="./src/favicon.ico">
   <!-- Tailwindcss를 사용하기 위한 cdn 코드 -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -22,14 +21,13 @@
   <script defer src="./js/agree.js"></script> <!-- 전체 동의 -->
   <script defer src="./js/iconclick.js"></script>
   <script defer src="./js/info.js"></script>
-  <script defer src="./js/info-check.js"></script> <!-- 인증 요청 정보 확인 -->
-  <!-- CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script defer src="./js/securityKeyboard.js"></script>
 </head>
 
 <body>
   <div class="viewport">
     <div class="screen">
+
       <div class="left-main">
         <div class="pick-width">
           <header class="certification-header">
@@ -171,7 +169,7 @@
                   <button class="agree__content__viewTerms"
                     popovertarget="personalInformationAgreementPopover">></button>
                   <div id="personalInformationAgreementPopover" popover class="agree__content__popover">
-                    우리FISA 3기에 오신걸 환영합니다 ^^
+                    우리FISA 3기에 오신걸 환영합니다 ^______^
                   </div>
                 </div>
                 <div class="agree__content__child">
@@ -181,6 +179,30 @@
                     popovertarget="thirdPartyInformationAgreementPopover">></button>
                   <div id="thirdPartyInformationAgreementPopover" popover class="agree__content__popover">
                     취준 화이팅!
+                  </div>
+                  
+                  <!--보안 키보드 모달창-->
+                  <div id="modal">
+                    <div class="keyboard-modal">
+                      <div class="keyboard-information">
+                        <p>보안 키패드를 이용하세요</p>
+                        <button class="button-close"><img src="./src/img/icon_closebutton.png" alt="security keyboard close"></button>
+                      </div>
+                      <div class="keyboard-modal-bg">
+                        <button class="securityKeyboard-button" value="1">1</button>
+                        <button class="securityKeyboard-button" value="2">2</button>
+                        <button class="securityKeyboard-button" value="3">3</button>
+                        <button class="securityKeyboard-button" value="4">4</button>
+                        <button class="securityKeyboard-button" value="5">5</button>
+                        <button class="securityKeyboard-button" value="6">6</button>
+                        <button class="securityKeyboard-button" value="7">7</button>
+                        <button class="securityKeyboard-button" value="8">8</button>
+                        <button class="securityKeyboard-button" value="9">9</button>
+                        <button class="securityKeyboard-button" value="0">0</button>
+                        <button class="securityKeyboard-button" style="visibility: hidden;"></button>
+                        <button class="backspace-button" value="-1">←</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -213,6 +235,7 @@
       <!-- 모달 배경 레이어 -->
       <div id="popoverBackdrop" class="popover-backdrop"></div>
     </div>
+  </div>
   </div>
 </body>
 
