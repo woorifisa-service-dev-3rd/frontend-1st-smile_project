@@ -222,6 +222,20 @@ div{
 <p>before&nbsp&nbsp&nbspafter</p>
 <br>
 
+### 생년월일 유효성 검사
+
+<code>Moment.js</code>를 사용하여 입력 받은 생년월일이 유효한 날짜인지 검사
+
+```
+<!-- CDN 선언(.html) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+```
+
+```
+// 사용(.js)
+if(!moment(생년월일).isValid()) 생년월일을 다시 입력하여 주십시오;
+```
+
 ## 📊Lighthouse를 통한 성능 개선
 
 ### Performance
