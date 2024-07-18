@@ -169,7 +169,7 @@
                   <button class="agree__content__viewTerms"
                     popovertarget="personalInformationAgreementPopover">></button>
                   <div id="personalInformationAgreementPopover" popover class="agree__content__popover">
-                    우리FISA 3기에 오신걸 환영합니다 ^^
+                    우리FISA 3기에 오신걸 환영합니다 ^______^
                   </div>
                 </div>
                 <div class="agree__content__child">
@@ -184,9 +184,9 @@
                   <!--보안 키보드 모달창-->
                   <div id="modal">
                     <div class="keyboard-modal">
-                      <div>
-                        <button class="button-close"><img src="./src/img/icon_closebutton.png" alt="security keyboard close"></button>
+                      <div class="keyboard-information">
                         <p>보안 키패드를 이용하세요</p>
+                        <button class="button-close"><img src="./src/img/icon_closebutton.png" alt="security keyboard close"></button>
                       </div>
                       <div class="keyboard-modal-bg">
                         <!-- <button class="securityKeyboard-button" value="1">1</button>
@@ -223,6 +223,17 @@
           </div>
         </div>
       </div>
+      <!-- 정보 입력 오류 시 경고 창 -->
+      <div id="infoWarningPopover" class="infoWarningPopover" popover>
+        <div class="infoWarningPopover__top">
+          <img class="infoWarningPopover__top__img" src="./src/img/icon_info.png" alt="info">
+          <div class="infoWarningPopover__top__title">안내</div>
+          <div class="infoWarningPopover__top__info" id="warningInfo"></div>
+        </div>
+        <button class="infoWarningPopover__bottom" id="infoWarningPopoverCloseBottom">확인</div>
+      </div>
+      <!-- 모달 배경 레이어 -->
+      <div id="popoverBackdrop" class="popover-backdrop"></div>
     </div>
   </div>
   </div>

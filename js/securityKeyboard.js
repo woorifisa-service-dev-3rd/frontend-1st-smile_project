@@ -32,19 +32,13 @@ function removeChildForIndex(parent, index) {
 // security keyboard 켜기
 function showModal(params) {
   modal.style.display = "block";
-  removeChildForIndex(keyboard_modal, 10);
   const randomIndexs = randomIndex(10);
   randomIndexs.forEach((index) => {
     keyboard_modal.insertAdjacentHTML(
-      "beforeend",
+      "afterbegin",
       `<button class="securityKeyboard-button" value="${index}">${index}</button>`
     );
   });
-  keyboard_modal.insertAdjacentHTML(
-    "beforeend",
-    ` <button class="securityKeyboard-button" style="visibility: hidden;"></button>
-                        <button class="backspace-button" value="-1">←</button>`
-  );
 
   // security keyboard button -> number input box insert
   // button 배열로 만들기
@@ -66,9 +60,11 @@ function showModal(params) {
       }
 
       // 클릭된 button 배경색 변경
-      buttonElement.style.backgroundColor = "#f2f2f2";
+      buttonElement.style.backgroundColor = "var(--sub-color)";
+      buttonElement.style.color = "#FFF";
       setTimeout(() => {
         buttonElement.style.backgroundColor = "";
+        buttonElement.style.color = "";
       }, 100);
     });
   });
@@ -91,19 +87,19 @@ const buttons = document.querySelector(".securityKeyboard-button");
 function backspaceFunction() {
   inputBirthElement.value = inputBirthElement.value.slice(0, -1);
 }
-
 // backspace button click -> 기입력된 값 삭제
 backspaceButtonArray.forEach((backspaceElement) => {
   backspaceElement.addEventListener("click", () => {
     backspaceFunction();
     // 클릭된 button 배경색 변경
-    backspaceElement.style.backgroundColor = "#f2f2f2";
+    backspaceElement.style.backgroundColor = "var(--sub-color)";
+    backspaceElement.style.color = "#FFF";
     setTimeout(() => {
       backspaceElement.style.backgroundColor = "";
+      backspaceElement.style.color = "";
     }, 100);
   });
 });
-
 // keyboard 입력 막기
 inputBirthElement.addEventListener("keyup", (e) => {
   e.target.value = "";
