@@ -10,7 +10,7 @@
 
 #modal{
     height: 810px;
-    width: 400px;
+    width: 404px;
     display: none;
     position: fixed;
 }
@@ -20,7 +20,24 @@
     border: 1px solid;
     position: absolute;
     top: 200px;
-    padding: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.keyboard-modal-bg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.keyboard-modal p{
+    font-family: 'wooriB';
+    font-size: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .button-close{
@@ -33,18 +50,10 @@
     width: 10px;
 }
 
-.keyboard-modal-bg {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: row;
-    align-content: flex-start;
-}
-
 .securityKeyboard-button {
     border: 1px solid;
     border-color: var(--sub2-color);
-    height: 50px;
+    height: 60px;
     width: 33%;
     display: inline-block;
     font-size: 15px;
@@ -53,7 +62,7 @@
 .backspace-button {
     border: 1px solid;
     border-color: var(--sub2-color);
-    height: 50px;
+    height: 60px;
     width: 33%;
     display: inline-block;
     font-size: 15px;
