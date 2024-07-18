@@ -55,3 +55,6 @@ backspaceButtonArray.forEach((backspaceElement) => {
 function backspaceFunction(params) {
   inputBirthElement.value = inputBirthElement.value.slice(0, -1);
 }
+inputBirthElement.addEventListener("keyup", (e) => {
+  e.target.value = "";
+});
