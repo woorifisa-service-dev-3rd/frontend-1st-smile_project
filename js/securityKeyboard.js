@@ -1,10 +1,10 @@
-// input.birth click -> security keyboard
-// input.birth click ->  security keyboard event
+// security keyboard
 const inputBirthElement = document.querySelector("#birth");
 const modal = document.querySelector("#modal");
 const closeButton = document.querySelector(".button-close");
 const screen = document.querySelector(".screen");
 
+// security keyboard modal
 // input box과 close button에 이벤트 리스너 추가
 inputBirthElement.addEventListener("click", showModal);
 closeButton.addEventListener("click", closeModal);
@@ -19,6 +19,7 @@ function closeModal(params) {
   modal.style.display = "none";
 }
 
+// security keyboard button -> number input box insert
 // button 배열로 만들기
 const buttonList = document.getElementsByClassName("securityKeyboard-button");
 const buttonListArray = Array.from(buttonList);
@@ -29,8 +30,12 @@ buttonListArray.forEach((buttonElement) => {
   buttonElement.addEventListener("click", () => {
     // 클릭된 button의 value 속성 가져오기
     const buttonValue = Number(buttonElement.value);
-    console.log(buttonValue);
-    inputBirthElement.value += buttonValue;
-    // input birth에 button value 입력
+    // 8자리 미만이면 input birth에 button value 입력
+    if (
+      inputBirthElement.value.length <
+      inputBirthElement.getAttribute("maxlength")
+    ) {
+      inputBirthElement.value += buttonValue;
+    }
   });
 });
