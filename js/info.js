@@ -2,6 +2,7 @@ const lis = document.getElementsByClassName("app-icon");
 const telecom = document.getElementById("telecom");
 const phone = document.getElementById("phone");
 let header = document.getElementById("header");
+const name_element = document.getElementById("name");
 
 Array.from(lis).forEach((li, index) => {
   li.addEventListener("click", () => {
@@ -28,3 +29,8 @@ function maxLengthCheck(object) {
     object.value = object.value.slice(0, object.maxLength);
   }
 }
+
+name_element.addEventListener("keyup", function (e) {
+  console.log(e.target.value);
+  e.target.value = e.target.value.replace(/[^ㄱ-힣a-zA-Z]/gi, "");
+});
