@@ -1,20 +1,3 @@
-/* 컬러 변수 */
-:root {
-  --main-color: #253a71;
-  --sub-color: #0067ac;
-  --sub2-color: #f2f2f2;
-  --font-main-color: #222222;
-  --font-sub-color: #5a5a5a;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-
-  /* Bold체 */
-  /* font-weight: bold; */
-}
-
 .wrapper__right__bottom {
   width: 100%;
   height: 100%;
