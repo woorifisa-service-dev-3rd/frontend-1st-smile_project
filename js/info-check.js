@@ -2,8 +2,6 @@
 let certificateTypeId = null; // 선택된 인증서 종류
 let name = null; // 이름
 let birthDate = null; // 생년월일
-let newsAgency = null; // 통신사
-let phoneNumber = null; // 휴대폰 번호
 let personalInformationCheckBox = false; // 개인정보 동의 체크박스
 let thirdPartyInformationCheckBox = false; // 제3자 정보 제공 동의 체크박스
 
@@ -15,12 +13,8 @@ const appListArrayDOM = Array.from(appListDOM);
 const nameDOM = document.getElementById('name');
 // 생년월일
 const birthDOM = document.getElementById('birth');
-// // 통신사
-// const newsAgencyDOM = document.getElementById('telecom');
-// // 휴대폰 번호(앞자리)
-// const firstPhoneNumberDOM = document.getElementById('firstPhone');
 // // 휴대폰 번호(뒷자리)
-// const lastPhoneNumberDOM = document.getElementById('phone');
+const lastPhoneNumberDOM = document.getElementById('phone');
 // 개인정보 이용 동의 체크 박스
 const personalInformationAgreementDOM = document.getElementById('personalInformationAgreement');
 // 제3자 정보 제공 동의 체크 박스
@@ -48,20 +42,6 @@ nameDOM.addEventListener('change', () => {
 birthDOM.addEventListener('change', () => {
   birthDate = birthDOM.value;
 })
-// // 통신사 입력 -> 통신사 변수에 할당
-// newsAgencyDOM.addEventListener('change', () => {
-//   newsAgency = newsAgencyDOM.value;
-// })
-// // 휴대폰 번호 앞자리 변경
-// firstPhoneNumberDOM.addEventListener('change', () => {
-//   phoneNumber = firstPhoneNumberDOM.value + lastPhoneNumberDOM.value;
-//   console.log(phoneNumber);
-// })
-// // 휴대폰 번호 뒷자리 변경
-// lastPhoneNumberDOM.addEventListener('change', () => {
-//   phoneNumber = firstPhoneNumberDOM.value + lastPhoneNumberDOM.value;
-//   console.log(phoneNumber);
-// })
 // 개인정보 이용 동의
 personalInformationAgreementDOM.addEventListener('change', () => {
   personalInformationCheckBox = personalInformationAgreementDOM.checked;
@@ -69,6 +49,11 @@ personalInformationAgreementDOM.addEventListener('change', () => {
 // 제3자 정보 제공 동의 동의
 thirdPartyInformationAgreementDOM.addEventListener('change', () => {
   thirdPartyInformationCheckBox = thirdPartyInformationAgreementDOM.checked;
+})
+
+// 테스트 -> 휴대폰 번호 아무거나 일단 입력하면 인증됐다 치기
+lastPhoneNumberDOM.addEventListener('change', () => {
+  lastPhoneNumberDOM.readOnly = true;
 })
 
 // 인증 요청 버튼 클릭 시 정보 유효성 검사
@@ -82,16 +67,16 @@ authenticationRequestButton.addEventListener('click', (event) => {
   else if(birthDate === null) infoWarningPopoverOpen('생년월일을 입력하여 주십시오.');
   // 생년월일 양식 잘못 입력
   else if(!moment(birthDate).isValid()) infoWarningPopoverOpen('생년월일을 다시 입력하여\n 주십시오.');
-  // // PASS 인증서인데 통신사 선택 x
-  // else if(certificateTypeId === 'certificate-7' && newsAgency === null)
-  //   infoWarningPopoverOpen('통신사를 선택해 주십시오.');
-  // // 휴대폰 번호 입력 x
-  // else if(phoneNumber === null || phoneNumber.length === 3) infoWarningPopoverOpen('휴대폰번호를 입력하여 주십시오.');
-  // // 휴대폰 번호 8자리 미입력
-  // else if(phoneNumber.length !== 11 && /^\d+$/.test(phoneNumber)) infoWarningPopoverOpen('휴대폰번호를 다시 입력하여\n 주십시오.');
+  // // 휴대폰 인증 x
+  else if(lastPhoneNumberDOM.readOnly === false) infoWarningPopoverOpen('휴대폰번호 인증을 진행하여\n 주십시요.');
   // 개인정보 이용 동의 체크 x
   else if(personalInformationCheckBox === false) infoWarningPopoverOpen('개인정보 이용 동의에 대한\n 필수항목 동의 하여야 합니다.');
+  // 제3자 정보 제공 동의 체크 x
   else if(thirdPartyInformationCheckBox === false) infoWarningPopoverOpen('제3자 정보제공 동의에 대한\n 필수항목 동의를 하여야 합니다.');
+  // 인증 요청 가능
+  else {
+    alert('인증 요청 가능~~');
+  }
 })
 
 // 팝오버 열기
