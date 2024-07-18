@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 기본적으로 모달 창을 숨기기 */
+        #modal {
+            display: none; /* 숨기기 */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5); /* 반투명 배경 */
+        }
+        .keyboard-modal {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            position: relative;
+        }
+        .button-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .button-close:hover,
+        .button-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .keyboard-button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-birth">
+        <div class="birth-label"><label for="birth">생년월일</label></div>
+        <div>
+          <input id="birth" class="birth" type="number" title="생년월일" placeholder="19900101" maxlength="8" oninput="maxLengthCheck(this);"/>
+        </div>
+    </div>
+    <!--보안 키보드 모달창-->
+    <div id="modal">
+        <div class="keyboard-modal">
+          <span class="button-close">x</span>
+          <p>Security Keyboard</p>
+          <div class="keyboard">
+            <button class="keyboard-button" value="1">1</button>
+            <button class="keyboard-button" value="2">2</button>
+            <button class="keyboard-button" value="3">3</button>
+            <button class="keyboard-button" value="4">4</button>
+            <button class="keyboard-button" value="5">5</button>
+            <button class="keyboard-button" value="6">6</button>
+            <button class="keyboard-button" value="7">7</button>
+            <button class="keyboard-button" value="8">8</button>
+            <button class="keyboard-button" value="9">9</button>
+            <button class="keyboard-button" value="0">0</button>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        // input.birth click -> security keyboard 모달창 띄우기
+        const inputBirthElement = document.getElementById("birth");
+        const modal = document.getElementById("modal");
+        const closeButton = document.querySelector(".button-close");
+
+        inputBirthElement.addEventListener("click", showModal);
+        closeButton.addEventListener("click", closeModal);
+
+        function showModal() {
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // 각 키보드 버튼에 클릭 이벤트 추가
+        const keyboardButtons = document.querySelectorAll('.keyboard-button');
+        keyboardButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.value;
+                inputBirthElement.value += value; // 버튼의 value 값을 input box에 추가
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,3 +1,13 @@
+/* 컬러 변수 */
+:root {
+    --main-color: #253a71;
+    --sub-color: #0067ac;
+    --sub2-color: #f2f2f2;
+    --font-main-color: #222222;
+    --font-sub-color: #5a5a5a;
+  }
+  
+
 #modal{
     width: 100%;
     height: 100%;
@@ -9,21 +19,35 @@
     background-color: #fff;
     width: 30%;
     height: 30%;
-    border: 1px solid #888;
+    border: 1px solid;
     position: absolute;
     top: 200px;
+    padding: 10px;
 }
 
 .button-close{
     position: absolute;
-    top: 10px;
     right: 10px;
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
 }
 
 .button-close img{
     height: 10px;
     width: 10px;
+}
+
+.keyboard-modal-bg {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-around;
+}
+
+.securityKeyboard-button {
+    border: 1px solid;
+    border-color: var(--sub2-color);
+    height: 4em;
+    width: 4em;
+    display: inline-block;
+    font-size: 15px;
 }
