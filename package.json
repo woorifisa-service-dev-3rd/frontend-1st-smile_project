@@ -10,20 +10,10 @@
     "prettier": "3.3.3"
   },
   "scripts": {
-<<<<<<< HEAD
-    "lint": "eslint .",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "dependencies": {
-    "gh-pages": "^6.1.1"
-  }
-=======
     "lint": "eslint ."
   },
   "dependencies": {
     "gh-pages": "^6.1.1"
   },
   "homepage": "https://woorifisa-service-dev-3rd.github.io/frontend-1st-smile_project/"
->>>>>>> 63ff0ee183ce1a093c48e1dc24b003bdbcf8e32a
 }
