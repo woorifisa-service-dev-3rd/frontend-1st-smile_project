@@ -65,7 +65,7 @@ authenticationRequestButton.addEventListener("click", (event) => {
   else if (birthDate === null)
     infoWarningPopoverOpen("생년월일을 입력하여 주십시오.");
   // 생년월일 양식 잘못 입력
-  else if (!moment(birthDOM.value).isValid())
+  else if (!moment(birthDOM.value).isValid() || birthDOM.value.length !== 8)
     infoWarningPopoverOpen("생년월일을 다시 입력하여\n 주십시오.");
   // // 휴대폰 인증 x
   else if (lastPhoneNumberDOM.readOnly === false)
