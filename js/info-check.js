@@ -50,9 +50,9 @@ birthDOM.addEventListener("blur", () => {
 });
 
 // 테스트 -> 휴대폰 번호 아무거나 일단 입력하면 인증됐다 치기
-lastPhoneNumberDOM.addEventListener("change", () => {
-  lastPhoneNumberDOM.readOnly = true;
-});
+// lastPhoneNumberDOM.addEventListener("change", () => {
+//   lastPhoneNumberDOM.readOnly = true;
+// });
 
 // 인증 요청 버튼 클릭 시 정보 유효성 검사
 authenticationRequestButton.addEventListener("click", (event) => {
